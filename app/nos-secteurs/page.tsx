@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { PageBanner } from '@/components/page-banner'
 import Link from 'next/link'
-import { ArrowRight, Building2, Users, Target, Lightbulb, ShoppingCart, Factory, Sparkles } from 'lucide-react'
+import { ArrowRight, Building2, Users, Target, Lightbulb, ShoppingCart, Factory, Sparkles, Briefcase, Store, UtensilsCrossed, Heart, Palette } from 'lucide-react'
 
 export default function NosSecteursPage() {
   return (
@@ -10,8 +10,8 @@ export default function NosSecteursPage() {
       {/* Page Banner */}
       <PageBanner
         title="Nos secteurs de référence"
-        subtitle="Des équipes expertes des grands enjeux stratégiques"
-        description="Nous comprenons les spécificités de votre métier pour vous proposer des solutions adaptées."
+        subtitle="Nous accompagnons ceux qui font vivre les territoires"
+        description="Artisans, restaurateurs, associations, indépendants, porteurs de projet : nous comprenons vos réalités et vos enjeux."
         backgroundImage="/images/banners/placeholder.svg"
       />
 
@@ -19,15 +19,15 @@ export default function NosSecteursPage() {
         <div className="container mx-auto px-4">
 
         {/* Secteurs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <Card className="expertise-card">
             <CardHeader>
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
-                <Building2 className="h-10 w-10 text-white" />
+                <Briefcase className="h-10 w-10 text-white" />
               </div>
-              <CardTitle className="text-2xl">Industrie</CardTitle>
+              <CardTitle className="text-2xl">Service & conseil</CardTitle>
               <CardDescription className="text-base">
-                Accompagnement des industriels dans leur transformation digitale et leur transition énergétique
+                Accompagnement des professionnels du service dans leur structuration et leur développement
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -35,19 +35,19 @@ export default function NosSecteursPage() {
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Transformation digitale et industrie 4.0</li>
-                    <li>• Transition énergétique et décarbonation</li>
-                    <li>• Optimisation des chaînes de production</li>
-                    <li>• Gestion des risques et conformité</li>
+                    <li>• Structuration de l'offre de services</li>
+                    <li>• Tarification et positionnement</li>
+                    <li>• Gestion de la relation client</li>
+                    <li>• Développement commercial</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Nos services :</h4>
+                  <h4 className="font-semibold mb-2">Notre accompagnement :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Stratégie de transformation digitale</li>
-                    <li>• Optimisation opérationnelle</li>
-                    <li>• Gestion de la supply chain</li>
-                    <li>• Accompagnement RSE</li>
+                    <li>• Clarification de votre offre</li>
+                    <li>• Mise en place d'outils de gestion</li>
+                    <li>• Stratégie de développement</li>
+                    <li>• Optimisation administrative</li>
                   </ul>
                 </div>
               </div>
@@ -57,11 +57,11 @@ export default function NosSecteursPage() {
           <Card className="expertise-card">
             <CardHeader>
               <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
-                <Users className="h-10 w-10 text-white" />
+                <Store className="h-10 w-10 text-white" />
               </div>
-              <CardTitle className="text-2xl">Grande Consommation</CardTitle>
+              <CardTitle className="text-2xl">Commerce & distribution</CardTitle>
               <CardDescription className="text-base">
-                Expertise dans l'évolution des modes de consommation et l'adaptation des business models
+                Soutien aux commerces de proximité et aux distributeurs dans leur adaptation et leur croissance
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -69,19 +69,53 @@ export default function NosSecteursPage() {
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Évolution des comportements consommateurs</li>
-                    <li>• Digitalisation de la distribution</li>
-                    <li>• Durabilité et économie circulaire</li>
-                    <li>• Innovation produit et packaging</li>
+                    <li>• Gestion des stocks et approvisionnement</li>
+                    <li>• Relation client et fidélisation</li>
+                    <li>• Présence digitale (e-commerce, réseaux)</li>
+                    <li>• Optimisation de la rentabilité</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Nos services :</h4>
+                  <h4 className="font-semibold mb-2">Notre accompagnement :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Stratégie de marque et positionnement</li>
-                    <li>• Transformation commerciale</li>
-                    <li>• Innovation et R&D</li>
-                    <li>• Performance opérationnelle</li>
+                    <li>• Pilotage financier et trésorerie</li>
+                    <li>• Stratégie omnicanale</li>
+                    <li>• Outils de gestion adaptés</li>
+                    <li>• Accompagnement digital</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="expertise-card">
+            <CardHeader>
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-6">
+                <UtensilsCrossed className="h-10 w-10 text-white" />
+              </div>
+              <CardTitle className="text-2xl">Restauration & artisanat</CardTitle>
+              <CardDescription className="text-base">
+                Accompagnement des artisans et restaurateurs dans la structuration et la pérennisation de leur activité
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold mb-2">Enjeux clés :</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Gestion des coûts et des marges</li>
+                    <li>• Organisation du travail et planning</li>
+                    <li>• Conformité réglementaire</li>
+                    <li>• Développement et visibilité</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Notre accompagnement :</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Structuration administrative</li>
+                    <li>• Suivi de la rentabilité</li>
+                    <li>• Optimisation des processus</li>
+                    <li>• Stratégie de développement</li>
                   </ul>
                 </div>
               </div>
@@ -91,11 +125,11 @@ export default function NosSecteursPage() {
           <Card className="expertise-card">
             <CardHeader>
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <ShoppingCart className="h-10 w-10 text-white" />
+                <Users className="h-10 w-10 text-white" />
               </div>
-              <CardTitle className="text-2xl">Distribution</CardTitle>
+              <CardTitle className="text-2xl">Économie sociale & associative</CardTitle>
               <CardDescription className="text-base">
-                Accompagnement des distributeurs dans leur transformation omnicanale et leur optimisation logistique
+                Soutien aux associations, ONG et structures de l'ESS dans leur organisation et leur impact
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -103,19 +137,53 @@ export default function NosSecteursPage() {
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Transformation omnicanale</li>
-                    <li>• Optimisation de l'expérience client</li>
-                    <li>• Efficacité logistique</li>
-                    <li>• Gestion des données clients</li>
+                    <li>• Gouvernance et organisation</li>
+                    <li>• Recherche de financements</li>
+                    <li>• Mesure d'impact social</li>
+                    <li>• Professionnalisation de la gestion</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Nos services :</h4>
+                  <h4 className="font-semibold mb-2">Notre accompagnement :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Stratégie omnicanale</li>
-                    <li>• Optimisation des réseaux</li>
-                    <li>• Transformation digitale</li>
-                    <li>• Data analytics et CRM</li>
+                    <li>• Structuration administrative</li>
+                    <li>• Pilotage budgétaire</li>
+                    <li>• Stratégie de développement</li>
+                    <li>• Outils de reporting</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="expertise-card">
+            <CardHeader>
+              <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                <Heart className="h-10 w-10 text-white" />
+              </div>
+              <CardTitle className="text-2xl">Professionnels du bien-être & du soin</CardTitle>
+              <CardDescription className="text-base">
+                Accompagnement des praticiens et structures du bien-être dans leur organisation et leur développement
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold mb-2">Enjeux clés :</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Organisation des rendez-vous et planning</li>
+                    <li>• Tarification et facturation</li>
+                    <li>• Conformité et réglementation</li>
+                    <li>• Visibilité et communication</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Notre accompagnement :</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Choix du statut adapté</li>
+                    <li>• Mise en place d'outils de gestion</li>
+                    <li>• Suivi financier et fiscal</li>
+                    <li>• Stratégie de développement</li>
                   </ul>
                 </div>
               </div>
@@ -125,11 +193,11 @@ export default function NosSecteursPage() {
           <Card className="expertise-card">
             <CardHeader>
               <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">
-                <Sparkles className="h-10 w-10 text-white" />
+                <Palette className="h-10 w-10 text-white" />
               </div>
-              <CardTitle className="text-2xl">Luxe</CardTitle>
+              <CardTitle className="text-2xl">Culture, création & production</CardTitle>
               <CardDescription className="text-base">
-                Expertise dans l'univers du luxe : savoir-faire artisanal, exclusivité et expérience client premium
+                Soutien aux créateurs, artistes et structures culturelles dans leur structuration et leur viabilité
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -137,58 +205,23 @@ export default function NosSecteursPage() {
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Préservation du savoir-faire artisanal</li>
-                    <li>• Digitalisation sans dénaturer</li>
-                    <li>• Durabilité et responsabilité</li>
-                    <li>• Expérience client exceptionnelle</li>
+                    <li>• Modèle économique et sources de revenus</li>
+                    <li>• Gestion de projets et production</li>
+                    <li>• Recherche de financements et subventions</li>
+                    <li>• Propriété intellectuelle</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Nos services :</h4>
+                  <h4 className="font-semibold mb-2">Notre accompagnement :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Stratégie de marque luxe</li>
-                    <li>• Excellence opérationnelle</li>
-                    <li>• Transformation digitale adaptée</li>
-                    <li>• Développement international</li>
+                    <li>• Structuration juridique et fiscale</li>
+                    <li>• Gestion administrative</li>
+                    <li>• Budgétisation de projets</li>
+                    <li>• Stratégie de développement</li>
                   </ul>
                 </div>
               </div>
             </CardContent>
-          </Card>
-        </div>
-
-        {/* Secteurs supplémentaires */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <Card className="text-center p-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-              <Target className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="font-semibold mb-2">Services</h3>
-            <p className="text-sm text-muted-foreground">Conseil, audit, formation</p>
-          </Card>
-
-          <Card className="text-center p-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-              <Factory className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="font-semibold mb-2">Énergie</h3>
-            <p className="text-sm text-muted-foreground">Transition énergétique</p>
-          </Card>
-
-          <Card className="text-center p-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-              <Lightbulb className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="font-semibold mb-2">Tech & Innovation</h3>
-            <p className="text-sm text-muted-foreground">Startups, scale-ups</p>
-          </Card>
-
-          <Card className="text-center p-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-              <Users className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="font-semibold mb-2">Associations</h3>
-            <p className="text-sm text-muted-foreground">ONG, fondations</p>
           </Card>
         </div>
 

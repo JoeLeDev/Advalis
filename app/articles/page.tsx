@@ -8,74 +8,93 @@ export default function ArticlesPage() {
   const articles = [
     {
       id: 1,
-      title: "L'économie circulaire : un défi stratégique pour les entreprises",
-      excerpt: "Comment intégrer les principes de l'économie circulaire dans votre modèle économique pour créer de la valeur tout en préservant les ressources.",
-      category: "Stratégie",
+      title: "Avant d'aller plus vite, allez plus clair",
+      excerpt: "Comment la clarté structurelle évite 80% des erreurs de gestion ?",
+      category: "Structurer",
       readTime: "8 min",
       date: "15 Janvier 2024",
       image: "bg-gradient-to-br from-blue-100 to-blue-200"
     },
     {
       id: 2,
-      title: "Transformation digitale : les clés du succès",
-      excerpt: "Guide pratique pour réussir votre transformation digitale et tirer parti des nouvelles technologies dans votre organisation.",
-      category: "Transformation",
-      readTime: "12 min",
-      date: "8 Janvier 2024",
-      image: "bg-gradient-to-br from-green-100 to-green-200"
+      title: "Le vrai coût du désordre administratif",
+      excerpt: "Pourquoi un suivi approximatif freine votre croissance sans que vous le réalisiez ?",
+      category: "Structurer",
+      readTime: "10 min",
+      date: "10 Janvier 2024",
+      image: "bg-gradient-to-br from-blue-100 to-blue-200"
     },
     {
       id: 3,
-      title: "Leadership et quête de sens au travail",
-      excerpt: "Comment créer un environnement de travail porteur de sens et développer un leadership inspirant pour vos équipes.",
-      category: "Capital Humain",
-      readTime: "10 min",
-      date: "2 Janvier 2024",
-      image: "bg-gradient-to-br from-purple-100 to-purple-200"
+      title: "Micro-entreprise : la simplicité qui peut coûter cher",
+      excerpt: "Les limites cachées d'un régime qu'on croit sans risques",
+      category: "Piloter",
+      readTime: "12 min",
+      date: "5 Janvier 2024",
+      image: "bg-gradient-to-br from-green-100 to-green-200"
     },
     {
       id: 4,
-      title: "Innovation et disruption : anticiper les changements",
-      excerpt: "Stratégies pour identifier les signaux faibles et anticiper les disruptions dans votre secteur d'activité.",
-      category: "Innovation",
+      title: "Relancer une activité sans s'épuiser",
+      excerpt: "Diagnostic, plan d'action et recentrage : les trois étapes pour retrouver de l'élan",
+      category: "Relancer",
       readTime: "15 min",
       date: "28 Décembre 2023",
-      image: "bg-gradient-to-br from-amber-100 to-amber-200"
+      image: "bg-gradient-to-br from-orange-100 to-orange-200"
     },
     {
       id: 5,
-      title: "Performance opérationnelle : mesurer pour améliorer",
-      excerpt: "Mise en place d'indicateurs pertinents et optimisation continue de vos processus pour améliorer vos performances.",
-      category: "Opérations",
+      title: "Digitaliser, oui. Mais intelligemment",
+      excerpt: "Comment choisir ses outils sans se noyer dans la technologie ?",
+      category: "Innover et se digitaliser",
       readTime: "9 min",
       date: "20 Décembre 2023",
-      image: "bg-gradient-to-br from-red-100 to-red-200"
+      image: "bg-gradient-to-br from-purple-100 to-purple-200"
     },
     {
       id: 6,
-      title: "Gestion de crise : préparer et réagir efficacement",
-      excerpt: "Méthodologie pour anticiper les crises et mettre en place des plans de contingence robustes dans votre organisation.",
-      category: "Risques",
-      readTime: "11 min",
-      date: "12 Décembre 2023",
-      image: "bg-gradient-to-br from-indigo-100 to-indigo-200"
+      title: "Entrepreneur, pas magicien",
+      excerpt: "Trouvez la juste exigence entre ambition et réalité",
+      category: "Regards humains",
+      readTime: "7 min",
+      date: "15 Décembre 2023",
+      image: "bg-gradient-to-br from-pink-100 to-pink-200"
+    },
+    {
+      id: 7,
+      title: "L'accompagnement comme acte de confiance",
+      excerpt: "Ce que signifie vraiment \"marcher à vos côtés\"",
+      category: "Regards humains",
+      readTime: "8 min",
+      date: "10 Décembre 2023",
+      image: "bg-gradient-to-br from-pink-100 to-pink-200"
     }
   ]
 
-  const categories = ["Tous", "Stratégie", "Transformation", "Capital Humain", "Innovation", "Opérations", "Risques"]
+  const categories = ["Tous", "Structurer", "Piloter", "Relancer", "Innover et se digitaliser", "Regards humains"]
 
   return (
     <div className="flex flex-col">
       {/* Page Banner */}
       <PageBanner
-        title="Nos articles & ressources"
-        subtitle="Insights et analyses pour éclairer vos décisions stratégiques"
-        description="Découvrez nos réflexions sur les enjeux contemporains du management et de la transformation."
+        title="Inspirations"
+        subtitle="Regards, analyses et pistes de réflexion"
+        description="Chez Advalis, nous croyons que le conseil ne se limite pas aux chiffres ni aux outils. Il s'agit avant tout de comprendre, de réfléchir et de faire évoluer les pratiques."
         backgroundImage="/images/banners/placeholder.svg"
       />
 
       <div className="py-20">
         <div className="container mx-auto px-4">
+
+        {/* Intro Text */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            À travers cette page, nous partagons des <strong>regards, analyses et pistes de réflexion</strong> sur le pilotage, la gestion et la structuration des activités.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+            Des articles pour <strong>inspirer</strong>, <strong>éclairer</strong> et <strong>accompagner</strong> ceux qui construisent leur projet au quotidien.
+          </p>
+        </div>
 
         {/* Categories Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">

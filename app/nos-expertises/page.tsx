@@ -10,8 +10,8 @@ export default function NosExpertisesPage() {
       {/* Page Banner */}
       <PageBanner
         title="Nos expertises"
-        subtitle="Des savoir-faire clés pour transformer les modèles de demain"
-        description="Nous vous accompagnons dans votre transformation avec des solutions adaptées à vos enjeux."
+        subtitle="Un accompagnement sur-mesure pour structurer, piloter et développer votre activité"
+        description="Nous vous accompagnons avec exigence, clarté et loyauté pour faire grandir ce qui mérite de durer."
         backgroundImage="/images/banners/placeholder.svg"
       />
 
@@ -25,20 +25,21 @@ export default function NosExpertisesPage() {
               <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Target className="h-8 w-8 text-primary" />
               </div>
-              <CardTitle>Stratégie & Business Models</CardTitle>
+              <CardTitle>Accompagnement à la création & au développement</CardTitle>
               <CardDescription>
-                Définition de votre vision stratégique et optimisation de vos modèles économiques pour assurer une croissance pérenne.
+                De l'idée au lancement : structurer votre projet, valider votre modèle et construire les bases solides pour démarrer.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="text-sm text-muted-foreground space-y-2 mb-6">
-                <li>• Définition de la stratégie d'entreprise</li>
-                <li>• Optimisation des modèles économiques</li>
-                <li>• Analyse concurrentielle</li>
-                <li>• Planification stratégique</li>
+                <li>• Étude de faisabilité et validation du projet</li>
+                <li>• Choix du statut juridique adapté</li>
+                <li>• Business plan et prévisionnel financier</li>
+                <li>• Mise en place des outils de gestion</li>
+                <li>• Accompagnement au lancement</li>
               </ul>
               <Button variant="outline" asChild className="w-full">
-                <Link href="/nos-expertises/strategie">
+                <Link href="/nos-expertises/creation-developpement">
                   En savoir plus
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -51,72 +52,21 @@ export default function NosExpertisesPage() {
               <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Building2 className="h-8 w-8 text-primary" />
               </div>
-              <CardTitle>Transformation Organisationnelle</CardTitle>
+              <CardTitle>Structuration & relance d'activité</CardTitle>
               <CardDescription>
-                Accompagnement du changement et optimisation des processus internes pour améliorer l'efficacité opérationnelle.
+                Clarifier, organiser et relancer : remettre de l'ordre, retrouver de la visibilité et repartir sur des bases saines.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="text-sm text-muted-foreground space-y-2 mb-6">
+                <li>• Diagnostic de la situation actuelle</li>
+                <li>• Réorganisation administrative et financière</li>
+                <li>• Optimisation de la trésorerie</li>
+                <li>• Plan d'action de redressement</li>
                 <li>• Accompagnement au changement</li>
-                <li>• Optimisation des processus</li>
-                <li>• Restructuration organisationnelle</li>
-                <li>• Gestion de projet</li>
               </ul>
               <Button variant="outline" asChild className="w-full">
-                <Link href="/nos-expertises/transformation">
-                  En savoir plus
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="expertise-card">
-            <CardHeader>
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Users className="h-8 w-8 text-primary" />
-              </div>
-              <CardTitle>Capital Humain & Engagement</CardTitle>
-              <CardDescription>
-                Développement des talents et renforcement de l'engagement collaborateur pour créer un environnement de travail performant.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="text-sm text-muted-foreground space-y-2 mb-6">
-                <li>• Développement des talents</li>
-                <li>• Stratégie RH</li>
-                <li>• Engagement collaborateur</li>
-                <li>• Formation et coaching</li>
-              </ul>
-              <Button variant="outline" asChild className="w-full">
-                <Link href="/nos-expertises/capital-humain">
-                  En savoir plus
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="expertise-card">
-            <CardHeader>
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="h-8 w-8 text-primary" />
-              </div>
-              <CardTitle>Performance & Opérations</CardTitle>
-              <CardDescription>
-                Optimisation des performances opérationnelles et mise en place d'indicateurs de suivi pour mesurer l'efficacité.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="text-sm text-muted-foreground space-y-2 mb-6">
-                <li>• Optimisation opérationnelle</li>
-                <li>• Tableaux de bord</li>
-                <li>• Amélioration continue</li>
-                <li>• Gestion de la performance</li>
-              </ul>
-              <Button variant="outline" asChild className="w-full">
-                <Link href="/nos-expertises/performance">
+                <Link href="/nos-expertises/structuration-relance">
                   En savoir plus
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -129,46 +79,21 @@ export default function NosExpertisesPage() {
               <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Lightbulb className="h-8 w-8 text-primary" />
               </div>
-              <CardTitle>Innovation & Digital</CardTitle>
+              <CardTitle>Conseil digital & outils de gestion</CardTitle>
               <CardDescription>
-                Accompagnement dans votre transformation digitale et développement de solutions innovantes pour votre secteur.
+                Choisir et déployer les bons outils pour gagner en efficacité, sans se perdre dans la technologie.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="text-sm text-muted-foreground space-y-2 mb-6">
-                <li>• Transformation digitale</li>
-                <li>• Innovation produit</li>
-                <li>• Stratégie technologique</li>
-                <li>• E-commerce</li>
+                <li>• Audit de vos besoins digitaux</li>
+                <li>• Sélection d'outils adaptés à votre activité</li>
+                <li>• Formation et accompagnement au déploiement</li>
+                <li>• Automatisation des tâches répétitives</li>
+                <li>• Optimisation de votre présence en ligne</li>
               </ul>
               <Button variant="outline" asChild className="w-full">
-                <Link href="/nos-expertises/innovation">
-                  En savoir plus
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="expertise-card">
-            <CardHeader>
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="h-8 w-8 text-primary" />
-              </div>
-              <CardTitle>Finance & Contrôle de Gestion</CardTitle>
-              <CardDescription>
-                Optimisation de la gestion financière et mise en place d'outils de pilotage pour une meilleure maîtrise des coûts.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="text-sm text-muted-foreground space-y-2 mb-6">
-                <li>• Contrôle de gestion</li>
-                <li>• Optimisation financière</li>
-                <li>• Budgeting et forecasting</li>
-                <li>• Analyse de rentabilité</li>
-              </ul>
-              <Button variant="outline" asChild className="w-full">
-                <Link href="/nos-expertises/finance">
+                <Link href="/nos-expertises/conseil-digital">
                   En savoir plus
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

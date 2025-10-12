@@ -160,32 +160,11 @@ export default function ContactPage() {
                   <Phone className="h-5 w-5 text-primary mt-1" />
                   <div>
                     <h4 className="font-medium">Téléphone</h4>
-                    <p className="text-muted-foreground">+33 1 23 45 67 89</p>
-                    <p className="text-sm text-muted-foreground">Lun-Ven 9h-18h</p>
+                    <p className="text-muted-foreground">06 98 96 39 96</p>
+                    <p className="text-sm text-muted-foreground">Disponible du lundi au vendredi</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-medium">Adresse</h4>
-                    <p className="text-muted-foreground">
-                      123 Avenue des Champs-Élysées<br />
-                      75008 Paris, France
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <Clock className="h-5 w-5 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-medium">Horaires</h4>
-                    <p className="text-muted-foreground">
-                      Lundi - Vendredi : 9h00 - 18h00<br />
-                      Réunions sur rendez-vous
-                    </p>
-                  </div>
-                </div>
               </CardContent>
             </Card>
 
@@ -197,19 +176,23 @@ export default function ContactPage() {
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Approche personnalisée adaptée à vos enjeux</span>
+                    <span><strong>Clarté avant tout</strong> : Un accompagnement transparent et compréhensible</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Expertise sectorielle approfondie</span>
+                    <span><strong>Une méthode éprouvée</strong> : Des outils et processus qui ont fait leurs preuves</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Accompagnement de bout en bout</span>
+                    <span><strong>Un partenaire de terrain</strong> : Présent à vos côtés dans l'action</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Résultats mesurables et durables</span>
+                    <span><strong>Un conseil humain</strong> : Une relation de confiance et d'écoute</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Une vision durable</strong> : Un accompagnement qui vise l'autonomie</span>
                   </li>
                 </ul>
               </CardContent>
@@ -236,15 +219,15 @@ export default function ContactPage() {
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-2">Travaillez-vous avec des associations ?</h3>
+              <h3 className="font-semibold mb-2">Travaillez-vous avec des TPE et indépendants ?</h3>
               <p className="text-sm text-muted-foreground">
-                Absolument, nous avons une expertise spécifique pour accompagner les associations et ONG.
+                Oui, nous sommes spécialisés dans l'accompagnement des TPE, artisans, indépendants et associations.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-2">Intervenez-vous en régions ?</h3>
+              <h3 className="font-semibold mb-2">Proposez-vous des tarifs adaptés ?</h3>
               <p className="text-sm text-muted-foreground">
-                Oui, nous nous déplaçons partout en France et pouvons également intervenir à l'international.
+                Nous croyons que le conseil doit être accessible. Nos tarifs sont transparents et adaptés à votre structure.
               </p>
             </div>
           </div>
