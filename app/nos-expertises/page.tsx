@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { PageBanner } from '@/components/page-banner'
 import Link from 'next/link'
-import { ArrowRight, Target, Building2, Users, TrendingUp, Lightbulb, BarChart3 } from 'lucide-react'
+import { ArrowRight, Target, Building2, Users, TrendingUp, Lightbulb, BarChart3, FileText } from 'lucide-react'
 
 export default function NosExpertisesPage() {
   return (
@@ -94,6 +94,61 @@ export default function NosExpertisesPage() {
               </ul>
               <Button variant="outline" asChild className="w-full">
                 <Link href="/nos-expertises/conseil-digital">
+                  En savoir plus
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Additional 2 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+          <Card className="expertise-card">
+            <CardHeader>
+              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <FileText className="h-8 w-8 text-primary" />
+              </div>
+              <CardTitle>Gestion administrative & conformité</CardTitle>
+              <CardDescription>
+                Sécuriser les démarches et fiabiliser le suivi.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="text-sm text-muted-foreground space-y-2 mb-6">
+                <li>• Mise en conformité réglementaire</li>
+                <li>• Sécurisation des démarches administratives</li>
+                <li>• Optimisation des processus</li>
+                <li>• Formation aux bonnes pratiques</li>
+              </ul>
+              <Button variant="outline" asChild className="w-full">
+                <Link href="/nos-expertises/gestion-administrative-conformite">
+                  En savoir plus
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="expertise-card">
+            <CardHeader>
+              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <BarChart3 className="h-8 w-8 text-primary" />
+              </div>
+              <CardTitle>Organisation financière & pilotage</CardTitle>
+              <CardDescription>
+                Donner de la visibilité et du sens aux chiffres.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="text-sm text-muted-foreground space-y-2 mb-6">
+                <li>• Mise en place de tableaux de bord</li>
+                <li>• Analyse de la rentabilité</li>
+                <li>• Optimisation de la trésorerie</li>
+                <li>• Pilotage de la performance</li>
+              </ul>
+              <Button variant="outline" asChild className="w-full">
+                <Link href="/nos-expertises/organisation-financiere-pilotage">
                   En savoir plus
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
