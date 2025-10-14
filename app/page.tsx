@@ -217,15 +217,15 @@ export default function HomePage() {
                   {/* Navigation arrows */}
                   <button 
                     onClick={prevSlide}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center transition-colors"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center transition-colors shadow-sm"
                   >
-                    <ChevronLeft className="h-5 w-5 text-gray-600" />
+                    <ChevronLeft className="h-5 w-5 text-gray-700" />
                   </button>
                   <button 
                     onClick={nextSlide}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-primary hover:bg-primary/80 rounded-full flex items-center justify-center transition-colors"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center transition-colors shadow-sm"
                   >
-                    <ChevronRight className="h-5 w-5 text-white" />
+                    <ChevronRight className="h-5 w-5 text-gray-700" />
                   </button>
                 </div>
 
