@@ -33,13 +33,25 @@ export function Header() {
             href="/articles" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            Articles
+            Nos articles
+          </Link>
+          <Link 
+            href="/nous-decouvrir" 
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Nous découvrir
+          </Link>
+          <Link 
+            href="/foire-a-question" 
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Foire aux questions
           </Link>
           <Link 
             href="/contact" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            Contact
+            Nous contacter
           </Link>
         </nav>
 
@@ -79,6 +91,13 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Articles
+            </Link>
+            <Link 
+              href="/faq" 
+              className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              FAQ
             </Link>
             <Link 
               href="/contact" 

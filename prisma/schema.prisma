@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  role      Role     @default(CUSTOMER)
+  stripeId  String?  // customer id
+  createdAt DateTime @default(now())
+  orders    Order[]
+  subs      Subscription[]
+  documents Document[]
+}
+
+model Order {
+  id          String   @id @default(cuid())
+  number      String   @unique
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  stripePiId  String?  // payment_intent (one-shot)
+  stripeInvId String?  // invoice id (abo)
+  amountTotal Int
+  currency    String   @default("eur")
+  status      String
+  packSlug    String
+  createdAt   DateTime @default(now())
+}
+
+model Subscription {
+  id               String   @id @default(cuid())
+  userId           String
+  user             User     @relation(fields: [userId], references: [id])
+  stripeSubId      String   @unique
+  status           String
+  currentPeriodEnd DateTime?
+  planPriceId      String   // stripe price id
+  createdAt        DateTime @default(now())
+}
+
+model Document {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  type      String   // "devis" | "contrat" | ...
+  fileKey   String
+  createdAt DateTime @default(now())
+}
+
+enum Role {
+  ADMIN
+  OPERATOR
+  CUSTOMER
+}

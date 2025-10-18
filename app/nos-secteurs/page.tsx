@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { PageBanner } from '@/components/page-banner'
 import Link from 'next/link'
 import { ArrowRight, Building2, Users, Target, Lightbulb, ShoppingCart, Factory, Sparkles, Briefcase, Store, UtensilsCrossed, Heart, Palette } from 'lucide-react'
+import { getActiveSecteurs } from '@/config/secteurs'
 
 export default function NosSecteursPage() {
   return (
@@ -35,7 +36,7 @@ export default function NosSecteursPage() {
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Structuration de l'offre de services</li>
+                    <li>• Structuration de l&apos;offre de services</li>
                     <li>• Tarification et positionnement</li>
                     <li>• Gestion de la relation client</li>
                     <li>• Développement commercial</li>
@@ -45,7 +46,7 @@ export default function NosSecteursPage() {
                   <h4 className="font-semibold mb-2">Notre accompagnement :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Clarification de votre offre</li>
-                    <li>• Mise en place d'outils de gestion</li>
+                    <li>• Mise en place d&apos;outils de gestion</li>
                     <li>• Stratégie de développement</li>
                     <li>• Optimisation administrative</li>
                   </ul>
@@ -129,7 +130,7 @@ export default function NosSecteursPage() {
               </div>
               <CardTitle className="text-2xl">Économie sociale & associative</CardTitle>
               <CardDescription className="text-base">
-                Soutien aux associations, ONG et structures de l'ESS dans leur organisation et leur impact
+                Soutien aux associations, ONG et structures de l&apos;ESS dans leur organisation et leur impact
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -139,7 +140,7 @@ export default function NosSecteursPage() {
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Gouvernance et organisation</li>
                     <li>• Recherche de financements</li>
-                    <li>• Mesure d'impact social</li>
+                    <li>• Mesure d&apos;impact social</li>
                     <li>• Professionnalisation de la gestion</li>
                   </ul>
                 </div>
@@ -181,7 +182,7 @@ export default function NosSecteursPage() {
                   <h4 className="font-semibold mb-2">Notre accompagnement :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Choix du statut adapté</li>
-                    <li>• Mise en place d'outils de gestion</li>
+                    <li>• Mise en place d&apos;outils de gestion</li>
                     <li>• Suivi financier et fiscal</li>
                     <li>• Stratégie de développement</li>
                   </ul>
@@ -228,20 +229,20 @@ export default function NosSecteursPage() {
         {/* CTA Section */}
         <div className="bg-muted/50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-advalis-heading font-bold mb-4">
-            Votre secteur n'est pas listé ?
+            Votre secteur n&apos;est pas listé ?
           </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Notre approche transversale nous permet de nous adapter à tous les secteurs. 
             Contactez-nous pour échanger sur les spécificités de votre domaine d'activité.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
+            <Button size="lg" className="hover:scale-105 transition-transform duration-300" asChild>
               <Link href="/contact">
                 Échangeons
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" className="hover:scale-105 transition-transform duration-300" asChild>
               <Link href="/nos-expertises">
                 Découvrir nos expertises
               </Link>
