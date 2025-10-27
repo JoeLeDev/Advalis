@@ -6,6 +6,16 @@ import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { Logo } from '@/components/logo'
 
+// Configuration des liens - une seule source de vérité
+const navLinks = [
+  { href: '/nos-expertises', label: 'Savoir-faire' },
+  { href: '/nos-secteurs', label: 'Secteurs d\'intervention' },
+  { href: '/articles', label: 'Inspirations' },
+  { href: '/nous-decouvrir', label: 'Nous découvrir' },
+  { href: '/foire-a-question', label: 'FAQ' },
+  { href: '/contact', label: 'Contact' }
+]
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -17,44 +27,16 @@ export function Header() {
 
         {/* Navigation Desktop */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link 
-            href="/nos-expertises" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Savoir-faire
-          </Link>
-          <Link 
-            href="/nos-secteurs" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Secteurs d&apos;intervention
-          </Link>
-          <Link 
-            href="/articles" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Inspirations
-          </Link>
-          <Link 
-            href="/nous-decouvrir" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Nous découvrir
-          </Link>
-          <Link 
-            href="/foire-a-question" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            FAQ
-          </Link>
-          <Link 
-            href="/contact" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-          Contact
-          </Link>
+          {navLinks.map((link) => (
+            <Link 
+              key={link.href}
+              href={link.href} 
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
-
 
         {/* Mobile Menu Button */}
         <Button
@@ -71,41 +53,16 @@ export function Header() {
       {isMenuOpen && (
         <div className="md:hidden border-t bg-background">
           <nav className="container mx-auto px-4 py-4 space-y-4">
-            <Link 
-              href="/nos-expertises" 
-              className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Nos expertises
-            </Link>
-            <Link 
-              href="/nos-secteurs" 
-              className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Nos secteurs
-            </Link>
-            <Link 
-              href="/articles" 
-              className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Articles
-            </Link>
-            <Link 
-              href="/faq" 
-              className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              FAQ
-            </Link>
-            <Link 
-              href="/contact" 
-              className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
+            {navLinks.map((link) => (
+              <Link 
+                key={link.href}
+                href={link.href} 
+                className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
             <Button variant="outline" size="sm" className="w-full">
               Échangeons
             </Button>
