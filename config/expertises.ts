@@ -35,7 +35,7 @@ export const expertises: Expertise[] = [
     title: "Gestion administrative & conformité",
     subtitle: "Sécuriser les démarches et fiabiliser le suivi.",
     description: "Chaque dirigeant le sait : les obligations administratives ne créent pas de chiffre d'affaires… mais elles assurent la stabilité.",
-    image: "/images/Expertises/Gestion administrative.jpeg",
+    image: "/images/Expertises/Gestion_administrative.jpeg",
     content: {
       presentation: "Chaque dirigeant le sait : les obligations administratives ne créent pas de chiffre d'affaires… mais elles assurent la stabilité. Elles protègent l'entreprise, rassurent les partenaires, et évitent les blocages. Pourtant, mal gérées, elles deviennent une source d'inquiétude et de perte de temps. Chez Advalis, nous aidons les dirigeants à reprendre la main sur ce qu'ils subissaient. Nous transformons le désordre administratif en structure claire, et les obligations en leviers de sérénité.",
       interventions: [
@@ -82,7 +82,7 @@ export const expertises: Expertise[] = [
     title: "Organisation financière & pilotage",
     subtitle: "Donner de la visibilité et du sens aux chiffres.",
     description: "Les chiffres ne sont pas une contrainte : ils sont la voix de l'entreprise.",
-    image: "/images/Expertises/Organisation financière.jpg",
+    image: "/images/Expertises/Organisation_financiere.jpg",
     content: {
       presentation: "Les chiffres ne sont pas une contrainte : ils sont la voix de l'entreprise. Ils disent ce qui fonctionne, ce qui s'essouffle, et où diriger ses efforts. Encore faut-il savoir les écouter. Chez Advalis, nous faisons parler les chiffres. Nous les transformons en repères simples, en tableaux clairs, et en leviers de décision. Notre approche repose sur un principe : mieux comprendre pour mieux piloter.",
       interventions: [
@@ -223,7 +223,7 @@ export const expertises: Expertise[] = [
     title: "Conseil digital & outils de gestion",
     subtitle: "Digitaliser avec justesse et efficacité.",
     description: "La digitalisation n'est pas un luxe, c'est une condition de clarté.",
-    image: "/images/Expertises/Conseil digital.jpg",
+    image: "/images/Expertises/Conseil_digital.jpg",
     content: {
       presentation: "La digitalisation n'est pas un luxe, c'est une condition de clarté. Mais l'outil ne remplace jamais la méthode : il doit la servir. Chez Advalis, nous aidons les dirigeants à choisir, organiser et maîtriser leurs outils numériques. Notre approche allie pédagogie, pragmatisme et sobriété technologique : le bon outil, pour la bonne raison.",
       interventions: [
