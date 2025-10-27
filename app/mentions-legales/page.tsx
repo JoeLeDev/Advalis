@@ -14,33 +14,35 @@ export default function MentionsLegalesPage() {
           <div className="prose prose-lg max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">1. Éditeur du site</h2>
             <p className="text-gray-700 mb-4">
-              Le site <strong>advalis-conseil.fr</strong> est édité par :
+              Le présent site <strong>https://advalis.fr</strong> est édité par :
             </p>
             <ul className="list-disc list-inside space-y-2 mb-6">
               <li><strong>Raison sociale :</strong> Advalis Conseil</li>
-              <li><strong>Forme juridique :</strong> Société par actions simplifiée (SAS)</li>
-              <li><strong>Capital social :</strong> [Montant du capital]</li>
-              <li><strong>Siège social :</strong> [Adresse complète]</li>
-              <li><strong>RCS :</strong> [Numéro RCS]</li>
-              <li><strong>SIRET :</strong> [Numéro SIRET]</li>
-              <li><strong>Code APE :</strong> [Code APE]</li>
-              <li><strong>TVA intracommunautaire :</strong> [Numéro TVA]</li>
+              <li><strong>Forme juridique :</strong> Entreprise individuelle</li>
+              <li><strong>SIREN :</strong> 797540382</li>
+              <li><strong>Siège social :</strong> 60 rue François 1er, 75008 PARIS</li>
+              <li><strong>Responsable de la publication :</strong> Réginald DELUCIEN</li>
+              <li><strong>📧 Contact :</strong> <a href="mailto:contact@advalis.fr" className="text-primary hover:underline">contact@advalis.fr</a></li>
+              <li><strong>📞 Téléphone :</strong> 0698963996</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">2. Directeur de la publication</h2>
-            <p className="text-gray-700 mb-6">
-              Le directeur de la publication est Réginald Delucien, en qualité de directeur général.
-            </p>
-
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">3. Hébergement</h2>
-            <p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">2. Hébergement</h2>
+            <p className="text-gray-700 mb-4">
               Le site est hébergé par :
             </p>
-            <ul>
-              <li><strong>Hébergeur :</strong> Vercel</li>
-              <li><strong>Adresse :</strong> 50 Vercoe Road, London, N15 6PS, United Kingdom</li>
-              <li><strong>Téléphone :</strong> +44 20 3514 9946</li>
+            <ul className="list-disc list-inside space-y-2 mb-6">
+              <li><strong>Hébergeur :</strong> Hostinger International Ltd.</li>
+              <li><strong>Adresse :</strong> 61 Lordou Vironos Street, 6023 Larnaca, Chypre</li>
+              <li><strong>Site web :</strong> <a href="https://www.hostinger.fr" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://www.hostinger.fr</a></li>
             </ul>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">3. Activité</h2>
+            <p className="text-gray-700 mb-6">
+              Advalis Conseil accompagne les indépendants, micro-entrepreneurs, associations et petites structures dans la gestion administrative, financière et stratégique de leur activité.
+            </p>
+            <p className="text-gray-700 mb-6">
+              Les prestations proposées ne constituent ni une activité d'expertise comptable, ni un conseil juridique réservé aux professionnels habilités.
+            </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">4. Propriété intellectuelle</h2>
             <p>
@@ -50,47 +52,52 @@ export default function MentionsLegalesPage() {
               La reproduction de tout ou partie de ce site sur un support électronique quel qu&apos;il soit est formellement interdite sauf autorisation expresse du directeur de la publication.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">5. Collecte et traitement des données personnelles</h2>
-            <p>
-              Les informations recueillies sur ce site font l&apos;objet d&apos;un traitement informatique destiné à répondre à vos demandes de contact. Les données sont conservées pendant 13 mois et sont destinées à advalis-conseil.fr.
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">5. Données personnelles (RGPD)</h2>
+            <p className="text-gray-700 mb-4">
+              Advalis Conseil s'engage à ce que la collecte et le traitement des données personnelles soient conformes au Règlement Général sur la Protection des Données (RGPD) et à la loi « Informatique et Libertés ».
             </p>
-            <p>
-              Conformément à la loi &quot;informatique et libertés&quot; du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD), vous disposez d&apos;un droit d&apos;accès, de rectification, de suppression et d&apos;opposition aux données vous concernant.
+            <p className="text-gray-700 mb-4">
+              Les données collectées via les formulaires (contact, prise de rendez-vous, Google Forms, etc.) sont utilisées uniquement pour :
             </p>
-            <p>
-              Pour exercer ce droit, contactez-nous à : <a href="mailto:contact@advalis-conseil.fr" className="text-primary hover:underline">contact@advalis-conseil.fr</a>
+            <ul className="list-disc list-inside space-y-2 mb-4">
+              <li>répondre aux demandes des utilisateurs,</li>
+              <li>assurer le suivi des prestations et la relation client,</li>
+              <li>transmettre des informations relatives aux offres Advalis.</li>
+            </ul>
+            <p className="text-gray-700 mb-4">
+              Aucune donnée n'est vendue, échangée ou transmise à des tiers sans consentement.
+            </p>
+            <p className="text-gray-700 mb-6">
+              Vous pouvez exercer vos droits d'accès, de rectification, d'opposition et de suppression en écrivant à :<br/>
+              📧 <a href="mailto:contact@advalis.fr" className="text-primary hover:underline">contact@advalis.fr</a><br/>
+              ou par courrier à : 60 rue François 1er, 75008 PARIS
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">6. Cookies</h2>
-            <p>
-              Ce site utilise des cookies pour améliorer votre expérience de navigation. En continuant à naviguer sur ce site, vous acceptez l&apos;utilisation de cookies conformément à notre politique de confidentialité.
+            <p className="text-gray-700 mb-6">
+              Le site peut être amené à déposer de petits fichiers texte (cookies) sur votre appareil pour améliorer votre expérience de navigation.<br/>
+              Vous pouvez configurer votre navigateur pour refuser tout ou partie des cookies.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">7. Responsabilité</h2>
-            <p>
-              Les informations contenues sur ce site sont aussi précises que possible et le site remis à jour à différentes périodes de l&apos;année, mais peut toutefois contenir des inexactitudes ou des omissions.
-            </p>
-            <p>
-              Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email, à l&apos;adresse contact@advalis-conseil.fr, en décrivant le problème de la manière la plus précise possible.
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">7. Limitation de responsabilité</h2>
+            <p className="text-gray-700 mb-6">
+              Advalis Conseil met tout en œuvre pour assurer la fiabilité et la mise à jour des informations diffusées sur le site.<br/>
+              Cependant, la responsabilité de l'éditeur ne saurait être engagée en cas d'erreurs, d'omissions ou d'indisponibilité temporaire du service.
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">8. Droit applicable</h2>
-            <p>
-              Tout litige en relation avec l&apos;utilisation du site advalis-conseil.fr est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents de melun.
+            <p className="text-gray-700 mb-6">
+              Les présentes mentions légales sont régies par le droit français.<br/>
+              Tout litige relatif à l'utilisation du site sera soumis à la compétence des tribunaux français.
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">9. Contact</h2>
-            <p>
-              Pour toute question concernant ces mentions légales, vous pouvez nous contacter :
+            <p className="text-gray-700 mb-4">
+              📞 Contact / 📩 <a href="mailto:contact@advalis.fr" className="text-primary hover:underline">contact@advalis.fr</a>
             </p>
-            <ul>
-              <li><strong>Email :</strong> <a href="mailto:contact@advalis-conseil.fr" className="text-primary hover:underline">contact@advalis-conseil.fr</a></li>
-              <li><strong>Téléphone :</strong> +33 6 75 56 37 33</li>
-              <li><strong>Adresse :</strong> [Adresse complète]</li>
-            </ul>
 
             <p className="text-sm text-muted-foreground mt-8">
-              <em>Dernière mise à jour : 19 octobre 2025</em>
+              <p>Dernière mise à jour : 27 octobre 2025</p>
             </p>
           </div>
         </div>
