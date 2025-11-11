@@ -145,6 +145,10 @@
     --muted-foreground: 0 0% 45.1%;
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
+    --accent-soft: 195 92% 94%; /* bleu pastel */
+    --accent-soft-foreground: 196 76% 22%;
+    --accent-warm: 35 100% 93%; /* pêche pastel */
+    --accent-warm-foreground: 27 80% 28%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
@@ -173,6 +177,10 @@
     --muted-foreground: 0 0% 63.9%;
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
+    --accent-soft: 199 89% 18%;
+    --accent-soft-foreground: 198 100% 88%;
+    --accent-warm: 33 88% 22%;
+    --accent-warm-foreground: 33 100% 90%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 14.9%;

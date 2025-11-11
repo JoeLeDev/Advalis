@@ -17,12 +17,15 @@ export default function HomePage() {
   // Utilisation des objets centralisés pour les expertises
   const expertiseData = expertises.map((expertise, index) => ({
     icon: [Target, Building2, Lightbulb, FileText, BarChart3][index] || Target,
-    category: expertise.title.split(' ')[0] + " & " + expertise.title.split(' ')[2],
+    badge: expertise.badge || expertise.title.split(' ').filter((word) => word !== '&')[0],
     title: expertise.title,
     description: expertise.description,
     image: expertise.image,
-    tags: expertise.title.split(' ').slice(0, 3),
-    link: `/nos-expertises/${expertise.title.toLowerCase().replace(/\s+/g, '-')}`,
+    tags: expertise.title
+      .split(' ')
+      .filter((word) => word !== '&')
+      .slice(0, 3),
+    link: `/nos-expertises/${expertise.id}`,
     bgColor: ["from-blue-50 to-blue-100", "from-green-50 to-green-100", "from-purple-50 to-purple-100", "from-orange-50 to-orange-100", "from-indigo-50 to-indigo-100"][index] || "from-blue-50 to-blue-100"
   }))
 
@@ -44,6 +47,50 @@ export default function HomePage() {
   // Récupération dynamique des articles
   const featuredArticles = getPublishedArticles().slice(0, 3)
 
+  const methodSteps = [
+    {
+      title: "Diagnostiquer",
+      description: "Nous analysons la situation réelle, les urgences et les leviers d’action.",
+      icon: BarChart3,
+    },
+    {
+      title: "Structurer",
+      description: "Nous posons un cadre simple : process, outils, responsabilités.",
+      icon: Building2,
+    },
+    {
+      title: "Piloter",
+      description: "Nous mettons en place des tableaux de bord lisibles et un suivi régulier.",
+      icon: FileText,
+    },
+    {
+      title: "Accompagner",
+      description: "Nous restons à vos côtés jusqu’à ce que la nouvelle organisation soit solide.",
+      icon: Users,
+    },
+  ]
+
+  const keyFigures = [
+    { value: "120+", label: "accompagnements réalisés" },
+    { value: "95%", label: "de clients satisfaits" },
+    { value: "3 ans", label: "d’expertise terrain" },
+  ]
+
+  const testimonials = [
+    {
+      quote:
+        "Un regard lucide et humain qui nous a permis de remettre de l’ordre tout en gardant le rythme.",
+      author: "Mélanie B.",
+      role: "Fondatrice d’une association culturelle",
+    },
+    {
+      quote:
+        "Advalis a transformé nos obligations en repères clairs. Nous avons retrouvé du temps et de la visibilité.",
+      author: "David R.",
+      role: "Dirigeant d’une PME de services",
+    },
+  ]
+
   return (
     <div className="flex flex-col">
       {/* Hero Banner */}
@@ -54,9 +101,24 @@ export default function HomePage() {
         backgroundImage="/images/banners/Acceuil_Advalis.jpg"
       >
         <div className="flex flex-col sm:flex-row gap-4 text-white">
-          <Button size="lg" variant="secondary" asChild className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1 group bg-transparent hover:bg-transparent text-white">
+          <Button
+            size="lg"
+            variant="secondary"
+            asChild
+            className="group bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:-translate-y-1 hover:shadow-lg transition-all"
+          >
             <Link href="/nous-decouvrir">
               Découvrir notre vision
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </Button>
+          <Button
+            size="lg"
+            className="group bg-accentWarm text-accentWarm-foreground border-transparent hover:bg-accentWarm/90 hover:-translate-y-1 hover:shadow-lg transition-all"
+            asChild
+          >
+            <Link href="/contact">
+              Prendre rendez-vous
               <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </Button>
@@ -167,24 +229,26 @@ export default function HomePage() {
                     </div>
                   )}
                   {/* Navigation arrows */}
-                  <button 
+                  <button
                     onClick={prevSlide}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center transition-colors shadow-sm"
+                    className="group absolute left-4 top-1/2 -translate-y-1/2 rounded-full border border-white/40 bg-white/80 backdrop-blur-sm w-10 h-10 flex items-center justify-center transition-all hover:-translate-y-1 hover:bg-white"
+                    aria-label="Expertise précédente"
                   >
-                    <ChevronLeft className="h-5 w-5 text-gray-700" />
+                    <ChevronLeft className="h-5 w-5 text-gray-700 transition-transform group-hover:-translate-x-0.5" />
                   </button>
-                  <button 
+                  <button
                     onClick={nextSlide}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center transition-colors shadow-sm"
+                    className="group absolute right-4 top-1/2 -translate-y-1/2 rounded-full border border-white/40 bg-white/80 backdrop-blur-sm w-10 h-10 flex items-center justify-center transition-all hover:-translate-y-1 hover:bg-white"
+                    aria-label="Expertise suivante"
                   >
-                    <ChevronRight className="h-5 w-5 text-gray-700" />
+                    <ChevronRight className="h-5 w-5 text-gray-700 transition-transform group-hover:translate-x-0.5" />
                   </button>
                 </div>
 
                 {/* Right side - Content */}
-                <div className="p-8 flex flex-col justify-center">
-                  <div className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full mb-4 w-fit">
-                    {currentExpertise.category}
+                <div className="p-8 flex flex-col justify-start gap-4">
+                  <div className="inline-flex items-center px-3 py-1 bg-accentSoft text-accentSoft-foreground text-sm font-semibold rounded-full shadow-sm w-fit">
+                    {currentExpertise.badge}
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">
                     {currentExpertise.title}
@@ -236,6 +300,95 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Notre méthode */}
+      <section className="py-24 bg-accentSoft/40">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4 text-accentSoft-foreground">
+              Notre méthode d’accompagnement
+            </h2>
+            <p className="text-lg text-accentSoft-foreground/80 max-w-3xl mx-auto">
+              Un parcours simple et rigoureux pour transformer vos obligations en leviers de confiance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {methodSteps.map((step, index) => {
+              const StepIcon = step.icon
+              return (
+                <Card
+                  key={step.title}
+                  className="h-full border-none bg-white/90 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                >
+                  <CardHeader className="space-y-4">
+                    <div className="w-12 h-12 rounded-full bg-accentSoft text-accentSoft-foreground flex items-center justify-center shadow-sm">
+                      <StepIcon className="h-6 w-6" />
+                    </div>
+                    <div className="text-sm uppercase tracking-wider text-muted-foreground">Étape {index + 1}</div>
+                    <CardTitle className="text-xl text-foreground">{step.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Chiffres clés */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="bg-white border border-border/70 rounded-3xl shadow-xl p-12">
+            <div className="text-center mb-12">
+              <p className="text-sm uppercase tracking-widest text-primary/70 mb-2">Confiance & impact</p>
+              <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold">Quelques repères concrets</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {keyFigures.map((item) => (
+                <div
+                  key={item.label}
+                  className="text-center px-6 py-8 rounded-2xl bg-accentSoft/30 border border-accentSoft/40"
+                >
+                  <div className="text-4xl md:text-5xl font-bold text-primary mb-3">{item.value}</div>
+                  <p className="text-muted-foreground text-base">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages */}
+      <section className="py-24 bg-accentWarm/40">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4 text-accentWarm-foreground">
+              Ils parlent de nous
+            </h2>
+            <p className="text-lg text-accentWarm-foreground/80 max-w-3xl mx-auto">
+              Des dirigeants, associations et structures de terrain qui ont retrouvé clarté, méthode et sérénité.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {testimonials.map((item) => (
+              <Card
+                key={item.author}
+                className="h-full bg-white/90 shadow-lg border-none p-8 flex flex-col justify-between hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+              >
+                <p className="text-lg leading-relaxed text-muted-foreground mb-6">“{item.quote}”</p>
+                <div>
+                  <p className="font-semibold text-foreground">{item.author}</p>
+                  <p className="text-sm text-muted-foreground">{item.role}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+ 
       {/* Nos Secteurs de Référence Section */}
       <section className="py-20 section-gradient">
         <div className="container mx-auto px-4">
@@ -250,7 +403,10 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {getActiveSecteurs().map((secteur, index) => (
-              <Card key={secteur.id} className="expertise-card">
+              <Card
+                key={secteur.id}
+                className="expertise-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
                 <CardHeader className="text-center">
                   <div className={`w-16 h-16 bg-gradient-to-br ${secteur.color} rounded-lg mx-auto mb-4 flex items-center justify-center`}>
                     <span className="text-white font-bold text-sm">{secteur.icon}</span>
@@ -285,15 +441,20 @@ export default function HomePage() {
               Contactez-nous pour échanger sur vos enjeux et découvrir comment nous pouvons vous accompagner.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" asChild className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
+              <Button size="lg" variant="outline" asChild className="group transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
                 <Link href="/contact">
                   Échangeons
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-                <Link href="/nos-expertises">
+              <Button
+                size="lg"
+                className="bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+                asChild
+              >
+                <Link href="/nos-expertises" className="flex items-center">
                   Découvrir nos savoir-faire
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
