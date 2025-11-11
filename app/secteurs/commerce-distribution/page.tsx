@@ -116,7 +116,7 @@ export default function CommerceDistributionPage() {
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <Link href="/nos-expertises">
-                    Découvrir nos expertises
+                    Découvrir nos savoir-faire
                   </Link>
                 </Button>
               </div>

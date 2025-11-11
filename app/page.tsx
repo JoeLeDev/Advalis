@@ -229,8 +229,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Button size="lg" variant="outline" asChild className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
               <Link href="/nos-expertises">
-                Découvrir toutes nos expertises
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                Découvrir nos savoir-faire
               </Link>
             </Button>
           </div>
@@ -294,7 +293,7 @@ export default function HomePage() {
               </Button>
               <Button size="lg" variant="outline" asChild className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
                 <Link href="/nos-expertises">
-                  Découvrir nos expertises
+                  Découvrir nos savoir-faire
                 </Link>
               </Button>
             </div>

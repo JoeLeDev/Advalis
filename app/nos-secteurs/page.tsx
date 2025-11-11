@@ -278,9 +278,9 @@ export default function NosSecteursPage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="hover:scale-105 transition-transform duration-300" asChild>
+            <Button size="lg" variant="outline" asChild>
               <Link href="/nos-expertises">
-                Découvrir nos expertises
+                Découvrir nos savoir-faire
               </Link>
             </Button>
           </div>

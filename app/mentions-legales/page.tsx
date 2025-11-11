@@ -14,7 +14,7 @@ export default function MentionsLegalesPage() {
           <div className="prose prose-lg max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">1. Éditeur du site</h2>
             <p className="text-gray-700 mb-4">
-              Le présent site <strong>https://advalis.fr</strong> est édité par :
+              Le présent site <strong>https://www.advalis.fr</strong> est édité par :
             </p>
             <ul className="list-disc list-inside space-y-2 mb-6">
               <li><strong>Raison sociale :</strong> Advalis Conseil</li>
@@ -23,7 +23,7 @@ export default function MentionsLegalesPage() {
               <li><strong>Siège social :</strong> 60 rue François 1er, 75008 PARIS</li>
               <li><strong>Responsable de la publication :</strong> Réginald DELUCIEN</li>
               <li><strong>📧 Contact :</strong> <a href="mailto:contact@advalis.fr" className="text-primary hover:underline">contact@advalis.fr</a></li>
-              <li><strong>📞 Téléphone :</strong> 0698963996</li>
+              <li><strong>📞 Téléphone :</strong> 01 85 09 72 43</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">2. Hébergement</h2>

@@ -122,15 +122,15 @@ export default function NousDecouvrirPage() {
         </div>
       </section>
 
-      {/* Nos expertises */}
+      {/* Nos savoir-faire */}
       <section className="py-20 section-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4">
-              Nos expertises
+              Nos savoir-faire
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Cinq domaines d&apos;intervention pour accompagner votre développement
+              Nos savoir-faire pour accompagner votre structure
             </p>
           </div>
           
@@ -152,7 +152,7 @@ export default function NousDecouvrirPage() {
           <div className="text-center mt-12">
             <Button size="lg" variant="outline" className="hover:scale-105 transition-transform duration-300" asChild>
               <Link href="/nos-expertises">
-                Découvrir nos expertises en détail
+                Découvrir nos savoir-faire en détail
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -195,7 +195,7 @@ export default function NousDecouvrirPage() {
           <div className="text-center mt-12">
             <Button size="lg" variant="outline" className="hover:scale-105 transition-transform duration-300" asChild>
               <Link href="/nos-secteurs">
-                Découvrir nos secteurs d&apos;intervention
+                Découvrir nos savoir-faire
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -289,7 +289,7 @@ export default function NousDecouvrirPage() {
               </Button>
               <Button size="lg" variant="outline" className="hover:scale-105 transition-transform duration-300" asChild>
                 <Link href="/nos-expertises">
-                  Découvrir nos expertises
+                  Découvrir nos savoir-faire
                 </Link>
               </Button>
             </div>

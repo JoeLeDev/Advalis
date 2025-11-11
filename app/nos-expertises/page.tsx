@@ -30,8 +30,8 @@ export default function NosExpertisesPage() {
                 {expertises.map((expertise, index) => {
                   const IconComponent = expertiseIcons[index] || Target
                   return (
-                    <Card key={expertise.id} className="expertise-card">
-                      <CardHeader>
+                    <Card key={expertise.id} className="expertise-card h-full flex flex-col">
+                      <CardHeader className="flex-grow">
                         <div className="w-full h-48 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
                           {expertise.image ? (
                             <Image 
@@ -51,7 +51,7 @@ export default function NosExpertisesPage() {
                           {expertise.description}
                         </CardDescription>
                       </CardHeader>
-                      <CardContent>
+                      <CardContent className="mt-auto">
                         <Button variant="outline" asChild className="w-full">
                           <Link href={`/nos-expertises/${expertise.id}`}>
                             En savoir plus

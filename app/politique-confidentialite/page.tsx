@@ -25,7 +25,7 @@ export default function PolitiqueConfidentialitePage() {
               <li><strong>Raison sociale :</strong> Advalis Conseil</li>
               <li><strong>Adresse :</strong> [Adresse complète]</li>
               <li><strong>Email :</strong> <a href="mailto:contact@advalis-conseil.fr" className="text-primary hover:underline">contact@advalis-conseil.fr</a></li>
-              <li><strong>Téléphone :</strong> +33 1 23 45 67 89</li>
+              <li><strong>Téléphone :</strong> 01 85 09 72 43</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200 mt-12">3. Données collectées</h2>
@@ -143,7 +143,7 @@ export default function PolitiqueConfidentialitePage() {
             </p>
             <ul>
               <li><strong>Email :</strong> <a href="mailto:contact@advalis-conseil.fr" className="text-primary hover:underline">contact@advalis-conseil.fr</a></li>
-              <li><strong>Téléphone :</strong> +33 1 23 45 67 89</li>
+              <li><strong>Téléphone :</strong> 01 85 09 72 43</li>
             </ul>
             <p>
               Vous avez également le droit d&apos;introduire une réclamation auprès de la CNIL (Commission Nationale de l&apos;Informatique et des Libertés) si vous estimez que vos droits ne sont pas respectés.

@@ -55,7 +55,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center space-x-2 text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm"> <Link href="mailto:advalis.service@gmail.com">advalis.service@gmail.com</Link></span>
+                <span className="text-sm"> <Link href="mailto:contact@advalis.fr">contact@advalis.fr</Link></span>
               </li>
               <li className="flex items-center space-x-2 text-muted-foreground">
                 <Phone className="h-4 w-4" />
