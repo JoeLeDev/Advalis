@@ -125,35 +125,20 @@ Message :
 ${message}
     `.trim()
 
-    // Envoyer l'email uniquement si la clé API est configurée
     if (process.env.RESEND_API_KEY) {
       try {
         await resend.emails.send({
-          from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev', // À remplacer par votre domaine vérifié
+          from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev', 
           to: process.env.RESEND_TO_EMAIL || 'contact@advalis.fr',
-          replyTo: email, // Permet de répondre directement au client
+          reply_to: email, 
           subject: emailSubject,
           html: emailHtml,
           text: emailText,
         })
       } catch (emailError) {
         console.error('Erreur lors de l\'envoi de l\'email:', emailError)
-        // On continue quand même pour ne pas bloquer l'utilisateur
-        // En production, vous pourriez vouloir logger cette erreur dans un service de monitoring
       }
-    } else {
-      // En développement, on log juste les données
-      console.log('Nouveau message de contact (email non envoyé - RESEND_API_KEY manquante):', {
-        firstName,
-        lastName,
-        email,
-        company: company || 'Non renseigné',
-        sector: sector || 'Non renseigné',
-        expertise: expertise || 'Non renseigné',
-        message,
-        date: new Date().toISOString()
-      })
-    }
+    } 
 
     return NextResponse.json(
       { 
