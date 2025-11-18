@@ -150,10 +150,14 @@ export default function NousDecouvrirPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="hover:scale-105 transition-transform duration-300" asChild>
-              <Link href="/nos-expertises">
+            <Button
+              size="lg"
+              asChild
+              className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+            >
+              <Link href="/nos-expertises" className="flex items-center justify-center">
                 Découvrir nos savoir-faire en détail
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>
@@ -193,10 +197,14 @@ export default function NousDecouvrirPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="hover:scale-105 transition-transform duration-300" asChild>
-              <Link href="/nos-secteurs">
+            <Button
+              size="lg"
+              asChild
+              className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+            >
+              <Link href="/nos-secteurs" className="flex items-center justify-center">
                 Découvrir nos savoir-faire
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>
@@ -287,9 +295,14 @@ export default function NousDecouvrirPage() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="hover:scale-105 transition-transform duration-300" asChild>
-                <Link href="/nos-expertises">
+              <Button
+                size="lg"
+                asChild
+                className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+              >
+                <Link href="/nos-expertises" className="flex items-center justify-center">
                   Découvrir nos savoir-faire
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </Button>
             </div>

@@ -16,7 +16,10 @@ export function Footer() {
               Nous vous accompagnons dans votre transformation et votre croissance.
             </p>
             <Link href="/contact">
-            <Button variant="outline" size="sm" className="hover:scale-105 transition-transform duration-300">
+            <Button
+              size="sm"
+              className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+            >
              Échangeons sur votre projet
             </Button>
              </Link>

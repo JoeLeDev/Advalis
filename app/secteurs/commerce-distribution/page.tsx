@@ -114,9 +114,14 @@ export default function CommerceDistributionPage() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="/nos-expertises">
+                <Button
+                  size="lg"
+                  asChild
+                  className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+                >
+                  <Link href="/nos-expertises" className="flex items-center justify-center">
                     Découvrir nos savoir-faire
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </Button>
               </div>

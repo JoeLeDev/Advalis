@@ -47,9 +47,12 @@ export function BlogArticleComponent({ article }: BlogArticleProps) {
 
           {/* Back to Articles */}
           <div className="mb-12">
-            <Button variant="outline" asChild className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-              <Link href="/articles">
-                <ArrowLeft className="mr-2 h-4 w-4" />
+            <Button
+              asChild
+              className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+            >
+              <Link href="/articles" className="flex items-center">
+                <ArrowLeft className="mr-2 h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
                 Retour aux articles
               </Link>
             </Button>
@@ -84,10 +87,14 @@ export function BlogArticleComponent({ article }: BlogArticleProps) {
                 <p className="text-lg mb-6">
                   {article.content.cta.description}
                 </p>
-                <Button size="lg" asChild className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-                  <Link href={article.content.cta.buttonLink}>
+                <Button
+                  size="lg"
+                  asChild
+                  className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+                >
+                  <Link href={article.content.cta.buttonLink} className="flex items-center justify-center">
                     {article.content.cta.buttonText}
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </Button>
               </div>

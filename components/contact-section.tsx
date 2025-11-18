@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export function ContactSection() {
   const [showForm, setShowForm] = useState(false);
@@ -81,8 +82,13 @@ export function ContactSection() {
               rel="noopener noreferrer"
               className="block"
             >
-              <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-3">
-                💬 Écrire sur WhatsApp
+              <Button
+                className="group w-full bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all py-3"
+              >
+                <span className="flex items-center justify-center">
+                  💬 Écrire sur WhatsApp
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
               </Button>
             </a>
           </div>

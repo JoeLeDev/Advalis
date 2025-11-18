@@ -1,18 +1,100 @@
 "use client";
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { PageBanner } from '@/components/page-banner'
-import { Mail, Phone, MapPin, Clock, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, ArrowRight, ChevronDown, ChevronUp, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
 import { contactFaqItems, contactInfo, contactReasons, contactSectors, contactExpertises } from '@/config/contact-faq'
+
+interface FormData {
+  firstName: string
+  lastName: string
+  email: string
+  company: string
+  sector: string
+  expertise: string
+  message: string
+}
 
 export default function ContactPage() {
   const [openItem, setOpenItem] = useState<number | null>(null);
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    sector: '',
+    expertise: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null
+    message: string
+  }>({ type: null, message: '' })
 
   const toggleItem = (index: number) => {
     setOpenItem(openItem === index ? null : index);
   };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+    // Réinitialiser le message d'erreur/succès quand l'utilisateur modifie le formulaire
+    if (submitStatus.type) {
+      setSubmitStatus({ type: null, message: '' })
+    }
+  }
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus({ type: null, message: '' })
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Une erreur est survenue')
+      }
+
+      // Succès
+      setSubmitStatus({
+        type: 'success',
+        message: data.message || 'Votre message a été envoyé avec succès. Nous vous répondrons dans les 24h.'
+      })
+
+      // Réinitialiser le formulaire
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        sector: '',
+        expertise: '',
+        message: ''
+      })
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: error instanceof Error ? error.message : 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer.'
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   // Sélection ciblée des questions/réponses pour la FAQ du contact
   const desiredFaqIds = [
@@ -85,7 +167,25 @@ export default function ContactPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Message de succès/erreur */}
+                  {submitStatus.type && (
+                    <div
+                      className={`p-4 rounded-md flex items-start space-x-3 ${
+                        submitStatus.type === 'success'
+                          ? 'bg-green-50 border border-green-200 text-green-800'
+                          : 'bg-red-50 border border-red-200 text-red-800'
+                      }`}
+                    >
+                      {submitStatus.type === 'success' ? (
+                        <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      ) : (
+                        <AlertCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      )}
+                      <p className="text-sm">{submitStatus.message}</p>
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium mb-2">
@@ -94,8 +194,12 @@ export default function ContactPage() {
                       <input
                         type="text"
                         id="firstName"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
                         required
-                        className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        disabled={isSubmitting}
+                        className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
                       />
                     </div>
                     <div>
@@ -105,8 +209,12 @@ export default function ContactPage() {
                       <input
                         type="text"
                         id="lastName"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
                         required
-                        className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        disabled={isSubmitting}
+                        className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
                       />
                     </div>
                   </div>
@@ -118,8 +226,12 @@ export default function ContactPage() {
                     <input
                       type="email"
                       id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      disabled={isSubmitting}
+                      className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                   </div>
 
@@ -130,7 +242,11 @@ export default function ContactPage() {
                     <input
                       type="text"
                       id="company"
-                      className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      disabled={isSubmitting}
+                      className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                   </div>
 
@@ -140,7 +256,11 @@ export default function ContactPage() {
                     </label>
                     <select
                       id="sector"
-                      className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      name="sector"
+                      value={formData.sector}
+                      onChange={handleInputChange}
+                      disabled={isSubmitting}
+                      className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <option value="">Sélectionnez un secteur</option>
                       {contactSectors.map((sector) => (
@@ -157,7 +277,11 @@ export default function ContactPage() {
                     </label>
                     <select
                       id="expertise"
-                      className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      name="expertise"
+                      value={formData.expertise}
+                      onChange={handleInputChange}
+                      disabled={isSubmitting}
+                      className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <option value="">Sélectionnez un domaine</option>
                       {contactExpertises.map((expertise) => (
@@ -174,16 +298,34 @@ export default function ContactPage() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
                       required
+                      disabled={isSubmitting}
                       placeholder="Décrivez brièvement vos enjeux et vos besoins..."
-                      className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed resize-none"
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full">
-                    Envoyer le message
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                        Envoi en cours...
+                      </>
+                    ) : (
+                      <>
+                        Envoyer le message
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>

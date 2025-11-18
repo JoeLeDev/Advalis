@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PageBanner } from "@/components/page-banner";
+import { ArrowRight } from "lucide-react";
 
 export default function ServicesPage() {
   const services = [
@@ -254,17 +255,29 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-300">
             <Link href="#contact">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
-                📋 Formulaire de diagnostic
+              <Button
+                size="lg"
+                className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all px-8 py-3"
+              >
+                <span className="flex items-center">
+                  📋 Formulaire de diagnostic
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
               </Button>
             </Link>
-            <a 
-              href="https://bit.ly/44ePnAO" 
-              target="_blank" 
+            <a
+              href="https://bit.ly/44ePnAO"
+              target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
-                💬 WhatsApp direct
+              <Button
+                size="lg"
+                className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all px-8 py-3"
+              >
+                <span className="flex items-center">
+                  💬 WhatsApp direct
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
               </Button>
             </a>
           </div>

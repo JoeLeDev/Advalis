@@ -21,7 +21,7 @@ export default function NosSecteursPage() {
 
         {/* Secteurs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <Card className="expertise-card">
+          <Card className="expertise-card h-full flex flex-col">
             <CardHeader>
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
                 <Briefcase className="h-10 w-10 text-white" />
@@ -31,8 +31,8 @@ export default function NosSecteursPage() {
                 Accompagnement des professionnels du service dans leur structuration et leur développement
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
+            <CardContent className="flex flex-col flex-1">
+              <div className="space-y-4 flex-1">
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
@@ -51,17 +51,20 @@ export default function NosSecteursPage() {
                     <li>• Optimisation administrative</li>
                   </ul>
                 </div>
-                <Button variant="outline" asChild className="w-full">
-                  <Link href="/secteurs/service-conseil">
-                    En savoir plus
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
               </div>
+              <Button
+                asChild
+                className="group w-full mt-6 bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+              >
+                <Link href="/secteurs/service-conseil" className="flex items-center justify-center">
+                  En savoir plus
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
             </CardContent>
           </Card>
 
-          <Card className="expertise-card">
+          <Card className="expertise-card h-full flex flex-col">
             <CardHeader>
               <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
                 <Store className="h-10 w-10 text-white" />
@@ -71,8 +74,8 @@ export default function NosSecteursPage() {
                 Soutien aux commerces de proximité et aux distributeurs dans leur adaptation et leur croissance
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
+            <CardContent className="flex flex-col flex-1">
+              <div className="space-y-4 flex-1">
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
@@ -91,17 +94,20 @@ export default function NosSecteursPage() {
                     <li>• Accompagnement digital</li>
                   </ul>
                 </div>
-                <Button variant="outline" asChild className="w-full">
-                  <Link href="/secteurs/commerce-distribution">
-                    En savoir plus
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
               </div>
+              <Button
+                asChild
+                className="group w-full mt-6 bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+              >
+                <Link href="/secteurs/commerce-distribution" className="flex items-center justify-center">
+                  En savoir plus
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
             </CardContent>
           </Card>
 
-          <Card className="expertise-card">
+          <Card className="expertise-card h-full flex flex-col">
             <CardHeader>
               <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-6">
                 <UtensilsCrossed className="h-10 w-10 text-white" />
@@ -111,8 +117,8 @@ export default function NosSecteursPage() {
                 Accompagnement des artisans et restaurateurs dans la structuration et la pérennisation de leur activité
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
+            <CardContent className="flex flex-col flex-1">
+              <div className="space-y-4 flex-1">
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
@@ -131,17 +137,20 @@ export default function NosSecteursPage() {
                     <li>• Stratégie de développement</li>
                   </ul>
                 </div>
-                <Button variant="outline" asChild className="w-full">
-                  <Link href="/secteurs/restauration-artisanat">
-                    En savoir plus
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
               </div>
+              <Button
+                asChild
+                className="group w-full mt-6 bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+              >
+                <Link href="/secteurs/restauration-artisanat" className="flex items-center justify-center">
+                  En savoir plus
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
             </CardContent>
           </Card>
 
-          <Card className="expertise-card">
+          <Card className="expertise-card h-full flex flex-col">
             <CardHeader>
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
                 <Users className="h-10 w-10 text-white" />
@@ -151,8 +160,8 @@ export default function NosSecteursPage() {
                 Soutien aux associations, ONG et structures de l'ESS dans leur organisation et leur impact
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
+            <CardContent className="flex flex-col flex-1">
+              <div className="space-y-4 flex-1">
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
@@ -171,17 +180,20 @@ export default function NosSecteursPage() {
                     <li>• Outils de reporting</li>
                   </ul>
                 </div>
-                <Button variant="outline" asChild className="w-full">
-                  <Link href="/secteurs/economie-sociale-associative">
-                    En savoir plus
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
               </div>
+              <Button
+                asChild
+                className="group w-full mt-6 bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+              >
+                <Link href="/secteurs/economie-sociale-associative" className="flex items-center justify-center">
+                  En savoir plus
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
             </CardContent>
           </Card>
 
-          <Card className="expertise-card">
+          <Card className="expertise-card h-full flex flex-col">
             <CardHeader>
               <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
                 <Heart className="h-10 w-10 text-white" />
@@ -191,8 +203,8 @@ export default function NosSecteursPage() {
                 Accompagnement des praticiens et structures du bien-être dans leur organisation et leur développement
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
+            <CardContent className="flex flex-col flex-1">
+              <div className="space-y-4 flex-1">
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
@@ -211,17 +223,20 @@ export default function NosSecteursPage() {
                     <li>• Stratégie de développement</li>
                   </ul>
                 </div>
-                <Button variant="outline" asChild className="w-full">
-                  <Link href="/secteurs/bien-etre-soin">
-                    En savoir plus
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
               </div>
+              <Button
+                asChild
+                className="group w-full mt-6 bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+              >
+                <Link href="/secteurs/bien-etre-soin" className="flex items-center justify-center">
+                  En savoir plus
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
             </CardContent>
           </Card>
 
-          <Card className="expertise-card">
+          <Card className="expertise-card h-full flex flex-col">
             <CardHeader>
               <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">
                 <Palette className="h-10 w-10 text-white" />
@@ -231,8 +246,8 @@ export default function NosSecteursPage() {
                 Soutien aux créateurs, artistes et structures culturelles dans leur structuration et leur viabilité
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
+            <CardContent className="flex flex-col flex-1">
+              <div className="space-y-4 flex-1">
                 <div>
                   <h4 className="font-semibold mb-2">Enjeux clés :</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
@@ -251,13 +266,16 @@ export default function NosSecteursPage() {
                     <li>• Stratégie de développement</li>
                   </ul>
                 </div>
-                <Button variant="outline" asChild className="w-full">
-                  <Link href="/secteurs/culture-creation-production">
-                    En savoir plus
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
               </div>
+              <Button
+                asChild
+                className="group w-full mt-6 bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+              >
+                <Link href="/secteurs/culture-creation-production" className="flex items-center justify-center">
+                  En savoir plus
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
             </CardContent>
           </Card>
         </div>
@@ -278,9 +296,14 @@ export default function NosSecteursPage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/nos-expertises">
+            <Button
+              size="lg"
+              asChild
+              className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+            >
+              <Link href="/nos-expertises" className="flex items-center justify-center">
                 Découvrir nos savoir-faire
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>

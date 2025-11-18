@@ -114,10 +114,13 @@ export default function ArticlesPage() {
                       {article.readTime}
                     </div>
                   </div>
-                  <Button variant="outline" asChild className="w-full">
-                    <Link href={`/articles/${article.slug || article.id}`}>
+                  <Button
+                    asChild
+                    className="group w-full bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+                  >
+                    <Link href={`/articles/${article.slug || article.id}`} className="flex items-center justify-center">
                       Lire l&apos;article
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -140,15 +143,24 @@ export default function ArticlesPage() {
             et découvrir comment nous pouvons vous accompagner concrètement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link href="/contact">
+            <Button
+              size="lg"
+              asChild
+              className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+            >
+              <Link href="/contact" className="flex items-center justify-center">
                 Échangeons
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/nos-expertises">
+            <Button
+              size="lg"
+              asChild
+              className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+            >
+              <Link href="/nos-expertises" className="flex items-center justify-center">
                 Découvrir nos savoir-faire
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>

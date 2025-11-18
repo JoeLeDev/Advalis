@@ -63,7 +63,10 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button variant="outline" size="sm" className="w-full">
+            <Button
+              size="sm"
+              className="w-full bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg transition-all"
+            >
               Échangeons
             </Button>
           </nav>

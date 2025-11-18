@@ -50,30 +50,30 @@ export default function HomePage() {
   const methodSteps = [
     {
       title: "Diagnostiquer",
-      description: "Nous analysons la situation réelle, les urgences et les leviers d’action.",
+      description: "Comprendre pour mieux agir. Nous identifions les causes, les urgences et les leviers concrets.",
       icon: BarChart3,
     },
     {
       title: "Structurer",
-      description: "Nous posons un cadre simple : process, outils, responsabilités.",
+      description: "Bâtir un cadre solide. Nous organisons les outils, les priorités et les responsabilités.",
       icon: Building2,
     },
     {
       title: "Piloter",
-      description: "Nous mettons en place des tableaux de bord lisibles et un suivi régulier.",
+      description: "Agir avec visibilité. Nous mettons en place des indicateurs simples pour suivre les résultats.",
       icon: FileText,
     },
     {
       title: "Accompagner",
-      description: "Nous restons à vos côtés jusqu’à ce que la nouvelle organisation soit solide.",
+      description: "aire durer la stabilité. Nous assurons un suivi humain jusqu’à l’autonomie complète.",
       icon: Users,
     },
   ]
 
   const keyFigures = [
-    { value: "120+", label: "accompagnements réalisés" },
-    { value: "95%", label: "de clients satisfaits" },
-    { value: "3 ans", label: "d’expertise terrain" },
+    { value: "40+", label: "accompagnements réalisés" },
+    { value: "Retours", label: "clients très positifs, saluant notre clarté, notre disponibilité et notre sens du concret" },
+    { value: "3 ans", label: "’expérience cumulée en gestion, management et accompagnement administratif" },
   ]
 
   const testimonials = [
@@ -171,10 +171,14 @@ export default function HomePage() {
                       {article.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="mt-auto">
-                    <Button variant="outline" asChild className="w-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-                      <Link href={`/articles/${article.slug}`}>
+                   <CardContent className="mt-auto">
+                    <Button
+                      asChild
+                      className="group w-full bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+                    >
+                      <Link href={`/articles/${article.slug}`} className="flex items-center justify-center">
                         Lire l&apos;article
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </Link>
                     </Button>
                   </CardContent>
@@ -184,8 +188,12 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" asChild className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-              <Link href="/articles">
+            <Button
+              size="lg"
+              asChild
+              className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+            >
+              <Link href="/articles" className="flex items-center justify-center">
                 Voir toutes nos inspirations
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
@@ -266,10 +274,13 @@ export default function HomePage() {
                       ))}
                     </div>
                   </div>
-                  <Button variant="outline" asChild className="w-fit">
-                    <Link href={currentExpertise.link}>
+                  <Button
+                    asChild
+                    className="group w-full bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+                  >
+                    <Link href={currentExpertise.link} className="flex items-center justify-center">
                       En savoir plus
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                   </Button>
                 </div>
@@ -291,9 +302,14 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" asChild className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-              <Link href="/nos-expertises">
+            <Button
+              size="lg"
+              asChild
+              className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+            >
+              <Link href="/nos-expertises" className="flex items-center justify-center">
                 Découvrir nos savoir-faire
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>
@@ -418,8 +434,12 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" asChild className="transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-              <Link href="/nos-secteurs">
+            <Button
+              size="lg"
+              asChild
+              className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+            >
+              <Link href="/nos-secteurs" className="flex items-center justify-center">
                 Découvrir nos secteurs d&apos;intervention
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
@@ -441,8 +461,12 @@ export default function HomePage() {
               Contactez-nous pour échanger sur vos enjeux et découvrir comment nous pouvons vous accompagner.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" asChild className="group transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
-                <Link href="/contact">
+              <Button
+                size="lg"
+                asChild
+                className="group bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+              >
+                <Link href="/contact" className="flex items-center">
                   Échangeons
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>

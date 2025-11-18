@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { ReactNode } from 'react'
 import '../styles/globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return (
     <html lang="fr" className={inter.className}>

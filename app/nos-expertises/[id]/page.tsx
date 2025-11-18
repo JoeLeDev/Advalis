@@ -171,10 +171,13 @@ export default function ExpertisePage({ params }: ExpertisePageProps) {
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <Button variant="outline" asChild className="w-full">
-                          <Link href={`/nos-expertises/${otherExpertise.id}`}>
+                        <Button
+                          asChild
+                          className="group w-full bg-accentSoft text-accentSoft-foreground border-none hover:bg-accentSoft/90 hover:shadow-lg hover:-translate-y-1 transition-all"
+                        >
+                          <Link href={`/nos-expertises/${otherExpertise.id}`} className="flex items-center justify-center">
                             En savoir plus
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                           </Link>
                         </Button>
                       </CardContent>
