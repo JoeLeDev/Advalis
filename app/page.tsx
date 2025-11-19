@@ -65,15 +65,15 @@ export default function HomePage() {
     },
     {
       title: "Accompagner",
-      description: "aire durer la stabilité. Nous assurons un suivi humain jusqu’à l’autonomie complète.",
+      description: "Faire durer la stabilité. Nous assurons un suivi humain jusqu’à l’autonomie complète.",
       icon: Users,
     },
   ]
 
   const keyFigures = [
-    { value: "40+", label: "accompagnements réalisés" },
-    { value: "Retours", label: "clients très positifs, saluant notre clarté, notre disponibilité et notre sens du concret" },
-    { value: "3 ans", label: "’expérience cumulée en gestion, management et accompagnement administratif" },
+    { value: "40+", label: "situations administratives, de gestion et d'organisation analysées" },
+    { value: "1", label: "méthode structurée pour clarifier et avancer rapidement" },
+    { value: "3", label: "années d’expérience terrain en gestion et pilotage opérationnel" },
   ]
 
   const testimonials = [
