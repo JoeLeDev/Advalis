@@ -50,30 +50,30 @@ export default function HomePage() {
   const methodSteps = [
     {
       title: "Diagnostiquer",
-      description: "Comprendre pour mieux agir. Nous identifions les causes, les urgences et les leviers concrets.",
+      description: " Nous identifions ce qui vous fait perdre du temps : tâches dispersées, urgences récurrentes, risques, zones floues et blocages organisationnels.",
       icon: BarChart3,
     },
     {
       title: "Structurer",
-      description: "Bâtir un cadre solide. Nous organisons les outils, les priorités et les responsabilités.",
+      description: " Nous créons un cadre solide : outils simples, priorités claires, répartition des rôles, flux de travail cohérents.",
       icon: Building2,
     },
     {
       title: "Piloter",
-      description: "Agir avec visibilité. Nous mettons en place des indicateurs simples pour suivre les résultats.",
+      description: " Nous mettons en place des repères visuels et indicateurs lisibles pour vous permettre de suivre votre activité sans surcharge mentale.",
       icon: FileText,
     },
     {
       title: "Accompagner",
-      description: "Faire durer la stabilité. Nous assurons un suivi humain jusqu’à l’autonomie complète.",
+      description: " Nous restons à vos côtés jusqu’à votre autonomie complète : un suivi humain, souple et orienté résultats. ",
       icon: Users,
     },
   ]
 
   const keyFigures = [
-    { value: "40+", label: "situations administratives, de gestion et d'organisation analysées" },
-    { value: "1", label: "méthode structurée pour clarifier et avancer rapidement" },
-    { value: "3", label: "années d’expérience terrain en gestion et pilotage opérationnel" },
+    { value: "40+", label: " situations de gestion, d’organisation et d’administratif analysées" },
+    { value: "1", label: " méthode claire et éprouvée pour avancer rapidement sans complexité" },
+    { value: "3", label: " années d’expérience terrain au service des petites structures" },
   ]
 
   const testimonials = [
@@ -97,7 +97,9 @@ export default function HomePage() {
       <PageBanner
         title=" Advalis Conseil"
         subtitle="Clarifier pour décider. Structurer pour durer."
-        description="Advalis Conseil accompagne les dirigeants à structurer et piloter leur activité pour renforcer la performance et la stabilité de leur organisation."
+        description=" Advalis Conseil accompagne les indépendants, TPE et associations qui manquent de temps, de clarté et de structure, et qui veulent reprendre le contrôle de leur activité sans complexité.
+
+Des solutions simples, humaines et efficaces pour réduire la charge mentale, gagner du temps et renforcer la stabilité de votre organisation."
         backgroundImage="/images/banners/Acceuil_Advalis.jpg"
       >
         <div className="flex flex-col sm:flex-row gap-4 text-white">
