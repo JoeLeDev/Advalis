@@ -39,7 +39,7 @@ export const expertises: Expertise[] = [
     description: "Les obligations administratives ne génèrent pas de chiffre d'affaires, mais elles assurent la stabilité et la pérennité.",
     image: "/images/Expertises/Gestion_administrative.jpeg",
     content: {
-      presentation: "Libérez-vous de la charge administrative et sécurisez votre activité.",
+      presentation: "Libérez-vous de la charge administrative et sécurisez votre activité.L’administratif ne crée pas directement du chiffre d’affaires, mais il conditionne la stabilité et la pérennité de votre activité. Lorsqu’il est mal organisé, incomplet ou subi, il devient une source constante de stress, d’erreurs et d’insécurité. Notre rôle est de remettre de l’ordre dans l’essentiel, de clarifier vos obligations et de vous offrir un cadre administratif simple, fiable et maîtrisable.",
       interventions: [
         { title: "Quand faire appel à nous ?", description: "Vous perdez du temps dans les démarches administratives." },
         { title: "Quand faire appel à nous ?", description: "Vous avez peur d'oublier une obligation ou une échéance." },
@@ -80,7 +80,7 @@ export const expertises: Expertise[] = [
     description: "Les chiffres ne sont pas une contrainte : ils sont la voix de l'entreprise.",
     image: "/images/Expertises/Organisation_financiere.jpg",
     content: {
-      presentation: "Donnez du sens à vos chiffres pour mieux décider.",
+      presentation: "Donnez du sens à vos chiffres pour mieux décider. Les chiffres ne sont pas une contrainte : ils sont la voix de votre activité. Sans indicateurs clairs, beaucoup d’entrepreneurs avancent au ressenti, sans réelle visibilité sur leur situation. Nous vous aidons à structurer une lecture simple et fiable de vos données, afin de piloter votre activité avec plus de lucidité, de sérénité et d’anticipation.",
       interventions: [
         { title: "Quand faire appel à nous ?", description: "Vous manquez de visibilité sur la situation financière de votre activité." },
         { title: "Quand faire appel à nous ?", description: "Vous avancez sans indicateurs clairs." },
@@ -121,7 +121,7 @@ export const expertises: Expertise[] = [
     description: "Créer une activité, ce n'est pas seulement remplir des formalités : c'est bâtir des fondations solides.",
     image: "/images/Expertises/Accompagnement.jpg",
     content: {
-      presentation: "Créer une activité, ce n'est pas seulement remplir des formalités : c'est poser des bases solides.",
+      presentation: "Créer une activité, ce n'est pas seulement remplir des formalités : c'est bâtir des fondations solides. Un projet mal structuré dès le départ peut rapidement devenir source de confusion, de fatigue et d'erreurs coûteuses. Créer ou développer une activité demande de poser un cadre clair, cohérent et adapté à votre réalité. Nous vous accompagnons pour sécuriser vos choix, clarifier votre fonctionnement et construire une base saine sur laquelle vous appuyer durablement.",
       interventions: [
         { title: "Quand faire appel à nous ?", description: "Vous lancez une activité ou un nouveau projet." },
         { title: "Quand faire appel à nous ?", description: "Vous doutez de la structure choisie." },
@@ -162,7 +162,7 @@ export const expertises: Expertise[] = [
     description: "Même les structures les plus solides peuvent perdre en cohérence.",
     image: "/images/Expertises/Structuration.jpg",
     content: {
-      presentation: "Redonner de la cohérence à une activité qui s'est complexifiée ou essoufflée.",
+      presentation: "Redonner de la cohérence à une activité qui s'est complexifiée ou essoufflée.Avec le temps, même une activité bien lancée peut perdre en clarté.Accumulation de décisions prises dans l'urgence, organisation qui ne suit plus, outils inadaptés : la structure devient fragile. Nous intervenons pour reprendre de la hauteur, remettre de l'ordre et redonner une cohérence globale à votre fonctionnement.",
       interventions: [
         { title: "Quand faire appel à nous ?", description: "Votre activité stagne ou devient difficile à piloter." },
         { title: "Quand faire appel à nous ?", description: "Vous vous sentez dispersé ou débordé." },
@@ -203,7 +203,7 @@ export const expertises: Expertise[] = [
     description: "La digitalisation n'est pas un luxe : c'est un levier de clarté et d'efficacité.",
     image: "/images/Expertises/Conseil_digital.jpg",
     content: {
-      presentation: "Des outils simples, utiles et adaptés — sans complexité inutile.",
+      presentation: "Des outils simples, utiles et adaptés — sans complexité inutile.La digitalisation n'est pas un objectif en soi. Des outils mal choisis ou mal utilisés peuvent devenir une charge supplémentaire plutôt qu'un levier. Notre approche consiste à sélectionner, simplifier et organiser des outils réellement utiles, au service de votre activité et de votre quotidien.",
       interventions: [
         { title: "Quand faire appel à nous ?", description: "Vos outils actuels vous compliquent la vie." },
         { title: "Quand faire appel à nous ?", description: "Vous utilisez trop d'outils… ou pas les bons." },
