@@ -14,6 +14,10 @@ import Image from 'next/image'
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
+  // Calculer les données une seule fois
+  const activeSecteurs = getActiveSecteurs()
+  const featuredArticles = getPublishedArticles().slice(0, 3)
+
   // Utilisation des objets centralisés pour les expertises
   const expertiseData = expertises.map((expertise, index) => ({
     icon: [Target, Building2, Lightbulb, FileText, BarChart3][index] || Target,
@@ -43,9 +47,6 @@ export default function HomePage() {
 
   const currentExpertise = expertiseData[currentSlide]
   const IconComponent = currentExpertise.icon
-
-  // Récupération dynamique des articles
-  const featuredArticles = getPublishedArticles().slice(0, 3)
 
   const methodSteps = [
     {
@@ -97,9 +98,7 @@ export default function HomePage() {
       <PageBanner
         title=" Advalis Conseil"
         subtitle="Clarifier pour décider. Structurer pour durer."
-        description=" Advalis Conseil accompagne les indépendants, TPE et associations qui manquent de temps, de clarté et de structure, et qui veulent reprendre le contrôle de leur activité sans complexité.
-
-Des solutions simples, humaines et efficaces pour réduire la charge mentale, gagner du temps et renforcer la stabilité de votre organisation."
+        description=" Advalis Conseil accompagne les indépendants, TPE et associations qui manquent de temps, de clarté et de structure, et qui veulent reprendre le contrôle de leur activité sans complexité."
         backgroundImage="/images/banners/Acceuil_Advalis.jpg"
       >
         <div className="flex flex-col sm:flex-row gap-4 text-white">
@@ -211,7 +210,7 @@ Des solutions simples, humaines et efficaces pour réduire la charge mentale, ga
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4">
-              Nos expertises métiers
+              Nos savoir-faire
             </h2>
           </div>
           
@@ -420,7 +419,7 @@ Des solutions simples, humaines et efficaces pour réduire la charge mentale, ga
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {getActiveSecteurs().map((secteur, index) => (
+            {activeSecteurs.map((secteur, index) => (
               <Card
                 key={secteur.id}
                 className="expertise-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"

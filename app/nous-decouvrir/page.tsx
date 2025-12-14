@@ -1,92 +1,109 @@
 import { PageBanner } from '@/components/page-banner'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { ArrowRight, Target, Users, CheckCircle } from 'lucide-react'
+import { ArrowRight, Target, Users, CheckCircle, Eye, Building2, Zap, Shield } from 'lucide-react'
 import { getActiveSecteurs } from '@/config/secteurs'
 import { expertises } from '@/config/expertises'
 
 export default function NousDecouvrirPage() {
+  // Calculer les données une seule fois
+  const activeSecteurs = getActiveSecteurs()
+  
   return (
     <div className="flex flex-col">
       {/* Page Banner */}
       <PageBanner
-        title="Ce qui nous anime"
-        subtitle="La clarté comme point de départ."
-        description="Nous marchons à vos côtés, pour apporter clarté, structure et confiance dans votre gestion."
+        title="Nous découvrir"
+        subtitle="Clarifier, structurer et apaiser le quotidien de ceux qui construisent les territoires."
+        description=""
         backgroundImage="/images/banners/Nous_decouvrir.jpg"
       />
 
-      {/* Notre raison d&apos;être */}
+      {/* Pourquoi Advalis existe */}
       <section className="py-20 section-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4">
-                Notre raison d&apos;être
+                Pourquoi Advalis existe
               </h2>
               <div className="w-16 h-1 bg-primary mx-auto mb-8"></div>
             </div>
             
             <div className="prose prose-lg max-w-none text-muted-foreground">
-              <blockquote className="border-l-4 border-primary pl-6 italic text-xl text-foreground my-8 font-medium">
-                &quot;Chez Advalis, nous croyons que la clarté est la première forme de sérénité.&quot;
-              </blockquote>
-              
               <p className="text-lg leading-relaxed mb-6">
-                Trop d&apos;entrepreneurs et d&apos;associations avancent avec de bonnes intentions, mais dans la confusion : démarches floues, règles changeantes, manque de structure. Ce désordre invisible finit par freiner leur élan, voire leur confiance.
+                Trop d&apos;indépendants, de TPE et d&apos;associations avancent seuls, dans la confusion, le stress ou le manque de structure.
               </p>
               
               <p className="text-lg leading-relaxed mb-6">
-                Notre mission est simple : <strong>rendre l&apos;organisation claire, fluide et maîtrisable</strong>.
+                Ils doivent gérer l&apos;administratif, organiser leur activité, prendre des décisions et porter la charge mentale… souvent sans soutien réel.
               </p>
               
               <p className="text-lg leading-relaxed mb-6">
-                Nous accompagnons les structures de proximité – indépendants, porteurs de projet, associations – à retrouver une direction, un système, une vision.
+                Le conseil traditionnel s&apos;adresse surtout aux grandes entreprises.
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-6">
+                Les petites structures, elles, doivent se débrouiller : retards, documents dispersés, manque de visibilité, surcharge.
               </p>
 
               <div className="bg-muted/30 rounded-lg p-6 my-8">
                 <p className="text-lg font-medium text-foreground text-center mb-4">
-                  Structurer, c&apos;est apaiser. Clarifier, c&apos;est libérer.
+                  Chez Advalis, nous croyons que l&apos;accompagnement ne doit pas être un luxe.
+                </p>
+                <p className="text-lg font-medium text-foreground text-center mb-2">
+                  <strong>Chaque entrepreneur mérite de la clarté, un cadre et un soutien fiable.</strong>
                 </p>
                 <p className="text-center text-muted-foreground">
-                  Derrière chaque dossier, il y a une personne, une histoire, un cap à retrouver.
+                  Quel que soit son niveau, ses moyens ou son point de départ.
                 </p>
               </div>
               
               <p className="text-lg leading-relaxed mb-6">
-                <strong>Advalis</strong> est né de cette conviction : le conseil peut être humain, rigoureux et accessible à la fois.
+                Advalis est né de ce constat :
               </p>
               
-              <p className="text-lg leading-relaxed mb-6">
-                Nous apportons les outils, la méthode et le regard extérieur qui permettent de reprendre confiance dans sa gestion.
+              <p className="text-lg leading-relaxed mb-6 italic">
+                les petites structures ont besoin d&apos;un accompagnement sérieux, humain, accessible — pas d&apos;un jargon ou d&apos;une usine à gaz.
               </p>
+              
+              <div className="bg-primary/10 rounded-lg p-6 my-8 border-l-4 border-primary">
+                <p className="text-lg font-semibold text-foreground">
+                  Notre mission :
+                </p>
+                <p className="text-lg font-bold text-foreground mt-2">
+                  clarifier, structurer et apaiser le quotidien de ceux qui construisent les territoires.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Notre approche */}
+      {/* Notre engagement */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4">
-              Notre approche
+              Notre engagement
             </h2>
             <div className="w-16 h-1 bg-primary mx-auto mb-8"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <Card className="text-center p-6">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <Target className="h-8 w-8 text-primary" />
+                  <Eye className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="text-xl">Clarté</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Rendre lisible ce qui est flou. Parler le même langage que le client.
+                  Rendre visible ce qui est flou.<br />
+                  Éclairer ce qui bloque.<br />
+                  Mettre des mots là où tout semble confus.
                 </p>
               </CardContent>
             </Card>
@@ -94,13 +111,14 @@ export default function NousDecouvrirPage() {
             <Card className="text-center p-6">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-primary" />
+                  <Building2 className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="text-xl">Structure</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Organiser ce qui s&apos;éparpille.
+                  Organiser ce qui s&apos;éparpille : tâches, outils, responsabilités, priorités.<br />
+                  Créer un cadre simple, durable et réaliste.
                 </p>
               </CardContent>
             </Card>
@@ -108,16 +126,124 @@ export default function NousDecouvrirPage() {
             <Card className="text-center p-6">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="h-8 w-8 text-primary" />
+                  <Zap className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="text-xl">Impact</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Transformer l&apos;effort en mouvement.
+                  Des solutions concrètes, applicables immédiatement.<br />
+                  L&apos;objectif n&apos;est pas d&apos;assister, mais de <strong>rendre autonome</strong>.
                 </p>
               </CardContent>
             </Card>
+
+            <Card className="text-center p-6">
+              <CardHeader>
+                <div className="w-16 h-16 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl">Accessibilité</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Un accompagnement sérieux, mais pensé pour les petites structures.<br />
+                  Sans jargon, sans complexe, sans prix inaccessibles.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Notre approche */}
+      <section className="py-20 section-gradient">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4">
+                Notre approche
+              </h2>
+              <div className="w-16 h-1 bg-primary mx-auto mb-8"></div>
+            </div>
+            
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+              <p className="text-lg leading-relaxed mb-6 text-center">
+                Nous travaillons avec une méthode simple et éprouvée :
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <Card className="p-6">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary font-bold text-xl">1</span>
+                    </div>
+                    <CardTitle className="text-xl">Diagnostiquer</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Comprendre la situation réelle, identifier les urgences, les blocages et les risques.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="p-6">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary font-bold text-xl">2</span>
+                    </div>
+                    <CardTitle className="text-xl">Structurer</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Construire un cadre solide : outils, priorités, organisation, process simples.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="p-6">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary font-bold text-xl">3</span>
+                    </div>
+                    <CardTitle className="text-xl">Piloter</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Mettre en place des repères lisibles pour avancer sans surcharge.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="p-6">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary font-bold text-xl">4</span>
+                    </div>
+                    <CardTitle className="text-xl">Accompagner</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Soutenir, ajuster et guider jusqu&apos;à la stabilité complète.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-lg text-muted-foreground italic">
+                Une approche humaine, exigeante, et parfaitement adaptée aux entrepreneurs de terrain.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -177,7 +303,7 @@ export default function NousDecouvrirPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {getActiveSecteurs().map((secteur) => (
+            {activeSecteurs.map((secteur) => (
               <Link key={secteur.id} href={`/nos-secteurs#${secteur.slug}`}>
                 <Card className="text-center p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer group">
                   <CardHeader>
@@ -211,81 +337,174 @@ export default function NousDecouvrirPage() {
         </div>
       </section>
 
-      {/* Notre engagement */}
-      <section className="py-20 section-gradient">
+      {/* Notre raison d&apos;être */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4">
-                Notre engagement
+                Notre raison d&apos;être
               </h2>
               <div className="w-16 h-1 bg-primary mx-auto mb-8"></div>
             </div>
             
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-6">
-                Chez <strong>Advalis</strong>, nous nous engageons à être <strong>plus qu&apos;un cabinet de conseil</strong> : un <strong>allié de terrain</strong>, fiable et impliqué, au service des dirigeants qui veulent avancer sereinement.
+                Nous existons pour ceux qui n&apos;ont jamais eu d&apos;accompagnement adapté :
               </p>
               
               <p className="text-lg leading-relaxed mb-6">
-                Notre promesse est simple : <strong>vous accompagner avec exigence, clarté et loyauté</strong>, sans jamais vous perdre dans le jargon ou les formules creuses.
+                les indépendants, artisans, restaurateurs, associations, petites entreprises, jeunes projets…
               </p>
               
               <p className="text-lg leading-relaxed mb-6">
-                Nous croyons que le conseil ne doit pas être un luxe réservé aux grandes structures, mais un <strong>levier accessible</strong> à ceux qui font vivre les territoires — artisans, restaurateurs, associations, indépendants, porteurs de projet.
+                Des personnes capables, motivées, talentueuses, mais trop souvent <strong>seules</strong> face à la complexité du quotidien.
               </p>
 
-              <div className="bg-muted/50 rounded-lg p-6 my-8">
-                <h3 className="font-semibold text-xl mb-4 text-foreground">Nous travaillons selon quatre principes constants :</h3>
-                <ol className="space-y-3 list-none">
-                  <li className="flex gap-3">
-                    <span className="font-bold text-primary">1.</span>
-                    <div>
-                      <strong className="text-foreground">Transparence totale</strong> — sur nos méthodes, nos tarifs et nos limites.
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="font-bold text-primary">2.</span>
-                    <div>
-                      <strong className="text-foreground">Proximité réelle</strong> — un contact humain, disponible et à l&apos;écoute.
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="font-bold text-primary">3.</span>
-                    <div>
-                      <strong className="text-foreground">Rigueur professionnelle</strong> — chaque accompagnement repose sur des bases solides, documentées et cohérentes.
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="font-bold text-primary">4.</span>
-                    <div>
-                      <strong className="text-foreground">Progression durable</strong> — notre but n&apos;est pas de vous assister, mais de vous rendre autonome, structuré et confiant.
-                    </div>
-                  </li>
-                </ol>
+              <div className="bg-primary/10 rounded-lg p-6 my-8 border-l-4 border-primary">
+                <p className="text-lg font-semibold text-foreground mb-2">
+                  Notre rôle est de rendre les choses simples, claires et maîtrisables.
+                </p>
+                <p className="text-lg font-semibold text-foreground">
+                  De vous permettre d&apos;avancer avec confiance, sans surcharge.
+                </p>
               </div>
-
-              <blockquote className="border-l-4 border-primary pl-6 italic text-lg text-foreground">
-                En d&apos;autres termes, nous ne faisons pas à votre place :
-                nous <strong>marchons à vos côtés</strong>, jusqu&apos;à ce que vous puissiez avancer sans nous.
-              </blockquote>
             </div>
           </div>
         </div>
       </section>
 
-      {/* En résumé */}
+      {/* Qui suis-je ? */}
+      <section className="py-20 section-gradient">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4">
+                Qui suis-je ?
+              </h2>
+              <div className="w-16 h-1 bg-primary mx-auto mb-8"></div>
+            </div>
+            
+            <div className="prose prose-lg max-w-none text-muted-foreground">
+              <p className="text-lg leading-relaxed mb-6">
+                Je suis <strong>Réginald DELUCIEN</strong>, fondateur d&apos;Advalis Conseil.
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-6">
+                J&apos;ai travaillé auprès d&apos;entrepreneurs, d&apos;associations et de dirigeants de petites structures.
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-6">
+                Partout, j&apos;ai vu la même réalité :
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-6">
+                des personnes engagées, mais freinées par le manque de clarté, l&apos;administratif, la désorganisation, ou l&apos;absence de soutien extérieur.
+              </p>
+
+              <div className="bg-muted/30 rounded-lg p-6 my-8">
+                <p className="text-lg font-medium text-foreground text-center mb-4">
+                  C&apos;est pour eux qu&apos;Advalis existe.
+                </p>
+                <p className="text-lg font-medium text-foreground text-center mb-2">
+                  Mon approche est directe, humaine et pragmatique :
+                </p>
+                <p className="text-center text-lg font-bold text-primary">
+                  Clarté. Structure. Impact.
+                </p>
+                <p className="text-center text-muted-foreground mt-4">
+                  Pas de jargon.<br />
+                  Pas de complexité inutile.<br />
+                  Juste ce qu&apos;il faut pour transformer votre situation et vous permettre d&apos;avancer sereinement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Notre engagement envers vous */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4">
+                Notre engagement envers vous
+              </h2>
+              <div className="w-16 h-1 bg-primary mx-auto mb-8"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground">Vous parler vrai</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground">Vous rendre les choses simples</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground">Vous aider sans vous infantiliser</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground">Vous accompagner avec loyauté et exigence</p>
+              </div>
+              <div className="flex items-start gap-3 md:col-span-2">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground">Vous permettre d&apos;être autonome, pas dépendant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Travailler avec Advalis */}
+      <section className="py-20 section-gradient">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4">
+                Travailler avec Advalis, c&apos;est…
+              </h2>
+              <div className="w-16 h-1 bg-primary mx-auto mb-8"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+              <div className="flex items-start gap-3">
+                <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground">reprendre le contrôle de son activité</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground">réduire drastiquement sa charge mentale</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground">savoir exactement quoi faire et dans quel ordre</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground">retrouver du temps et de la sérénité</p>
+              </div>
+              <div className="flex items-start gap-3 md:col-span-2">
+                <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground">poser des bases solides pour durer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Conclusion */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-8 text-foreground">
-              En résumé
-            </h2>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-              <p className="leading-relaxed text-foreground">
-                Advalis, c&apos;est le lien entre la rigueur d&apos;un cabinet et la réalité d&apos;un entrepreneur.
-              </p>
+            <div className="bg-primary/10 rounded-2xl p-12 mb-8 border-l-4 border-primary">
+              <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-4 text-foreground">
+                Ensemble, clarifions. Structurons. Avançons.
+              </h2>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

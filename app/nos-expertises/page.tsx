@@ -26,6 +26,13 @@ export default function NosExpertisesPage() {
           {/* Expertises Grid */}
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
+              <p className="text-center text-2xl mb-8 italic">
+              Nos services sont conçus pour répondre aux défis quotidiens des indépendants, TPE et associations : surcharge, désorganisation, manque de clarté, décisions difficiles, administratif envahissant.
+
+              Notre objectif :
+
+              transformer votre fonctionnement pour vous permettre d’avancer avec sérénité, efficacité et stabilité.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 {expertises.map((expertise, index) => {
                   const IconComponent = expertiseIcons[index] || Target

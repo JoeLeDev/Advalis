@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { PageBanner } from '@/components/page-banner'
 import Link from 'next/link'
-import { ArrowRight, Quote, CheckCircle } from 'lucide-react'
+import { ArrowRight, Quote, CheckCircle, Clock, AlertCircle, FileStack, Shield, FolderTree, FileCheck, Settings, Handshake, Eye, TrendingUp, Rocket, RefreshCw, Zap, Laptop } from 'lucide-react'
 import { expertises, getExpertiseById } from '@/config/expertises'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -50,26 +50,82 @@ export default function ExpertisePage({ params }: ExpertisePageProps) {
           {/* Nos interventions */}
           <section className="py-16 bg-muted/30">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-advalis-heading font-bold mb-12 text-center">
-                Nos interventions
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {content.interventions.map((intervention, index) => (
-                  <Card key={index} className="text-center">
-                    <CardHeader>
-                      <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-primary">{index + 1}</span>
-                      </div>
-                      <CardTitle className="text-lg">{intervention.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-sm">
-                        {intervention.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+              {content.interventions.some(i => i.title === "Quand faire appel à nous ?") ? (
+                <>
+                  {/* Quand faire appel à nous */}
+                  <div className="mb-16">
+                    <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-12 text-center">
+                      Quand faire appel à nous ?
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                      {content.interventions
+                        .filter(i => i.title === "Quand faire appel à nous ?")
+                        .map((intervention, index) => (
+                          <Card key={index} className="text-center">
+                            <CardHeader>
+                              <div className="w-16 h-16 bg-muted rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <span className="text-2xl font-bold text-foreground">{index + 1}</span>
+                              </div>
+                            </CardHeader>
+                            <CardContent>
+                              <CardDescription className="text-sm text-muted-foreground">
+                                {intervention.description}
+                              </CardDescription>
+                            </CardContent>
+                          </Card>
+                        ))}
+                    </div>
+                  </div>
+
+                  {/* Ce que nous faisons */}
+                  <div className="mb-16">
+                    <h2 className="text-3xl md:text-4xl font-advalis-heading font-bold mb-12 text-center">
+                      Ce que nous faisons
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                      {content.interventions
+                        .filter(i => i.title === "Ce que nous faisons")
+                        .map((intervention, index) => (
+                          <Card key={index} className="text-center">
+                            <CardHeader>
+                              <div className="w-16 h-16 bg-muted rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <span className="text-2xl font-bold text-foreground">{index + 1}</span>
+                              </div>
+                            </CardHeader>
+                            <CardContent>
+                              <CardDescription className="text-sm text-muted-foreground">
+                                {intervention.description}
+                              </CardDescription>
+                            </CardContent>
+                          </Card>
+                        ))}
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <h2 className="text-3xl font-advalis-heading font-bold mb-12 text-center">
+                    Nos interventions
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {content.interventions.map((intervention, index) => (
+                      <Card key={index} className="text-center">
+                        <CardHeader>
+                          <div className="w-16 h-16 bg-muted rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <span className="text-2xl font-bold text-foreground">{index + 1}</span>
+                          </div>
+                          <CardTitle className="text-lg font-bold">{intervention.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription className="text-sm text-muted-foreground">
+                            {intervention.description}
+                          </CardDescription>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </section>
 
@@ -95,11 +151,10 @@ export default function ExpertisePage({ params }: ExpertisePageProps) {
           <section className="py-16 bg-muted/30">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-advalis-heading font-bold mb-8 text-center">
-                Le résultat
+                Vous obtenez :
               </h2>
               <div className="text-center mb-8">
-                <h3 className="text-xl font-semibold mb-6">{content.result.title}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                   {content.result.benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />

@@ -35,32 +35,37 @@ export const expertises: Expertise[] = [
     id: "gestion-administrative",
     badge: "Office management",
     title: "Gestion administrative & conformité",
-    subtitle: "Sécuriser les démarches, fiabiliser le suivi.",
-    description: "Les obligations administratives ne génèrent pas de chiffre d’affaires, mais elles assurent la stabilité et la pérennité.",
+    subtitle: "Libérez-vous de la charge administrative et sécurisez votre activité.",
+    description: "Les obligations administratives ne génèrent pas de chiffre d'affaires, mais elles assurent la stabilité et la pérennité.",
     image: "/images/Expertises/Gestion_administrative.jpeg",
     content: {
-      presentation: "Les obligations administratives ne créent pas directement de valeur, mais elles garantissent la solidité de l’entreprise. Bien maîtrisées, elles deviennent un levier de sérénité et de confiance. Mal gérées, elles se transforment en source d’angoisse et de perte de temps. Chez Advalis, nous aidons les dirigeants à reprendre la main sur ces aspects souvent subis : nous transformons le désordre en clarté, et les contraintes en sécurité durable.",
+      presentation: "Libérez-vous de la charge administrative et sécurisez votre activité.",
       interventions: [
-        { title: "Mise en ordre", description: "Audit et régularisation des documents essentiels." },
-        { title: "Suivi des obligations", description: "Gestion des échéances URSSAF, impôts et charges sociales." },
-        { title: "Structuration", description: "Organisation, archivage et automatisation des démarches." },
-        { title: "Interface", description: "Gestion directe des échanges avec les administrations." }
+        { title: "Quand faire appel à nous ?", description: "Vous perdez du temps dans les démarches administratives." },
+        { title: "Quand faire appel à nous ?", description: "Vous avez peur d'oublier une obligation ou une échéance." },
+        { title: "Quand faire appel à nous ?", description: "Les documents s'accumulent ou sont mal organisés." },
+        { title: "Quand faire appel à nous ?", description: "Vous souhaitez sécuriser votre situation (URSSAF, statuts, obligations)." },
+        { title: "Ce que nous faisons", description: "Tri, classement et structuration de votre administratif." },
+        { title: "Ce que nous faisons", description: "Mise en conformité de votre situation selon votre activité." },
+        { title: "Ce que nous faisons", description: "Organisation simple de vos documents (physique et numérique)." },
+        { title: "Ce que nous faisons", description: "Accompagnement sur les démarches clés, selon votre contexte." }
       ],
       approach: {
         quote: "Nous ne traitons pas des papiers. Nous construisons des fondations.",
-        description: "La rigueur n’est pas une contrainte : c’est un service rendu à la liberté. Notre mission consiste à clarifier, structurer et fiabiliser, pour que les démarches cessent d’être une charge. Une entreprise bien organisée avance toujours plus sereinement."
+        description: "La rigueur n'est pas une contrainte : c'est un service rendu à la liberté. Notre mission consiste à clarifier, structurer et fiabiliser, pour que les démarches cessent d'être une charge. Une entreprise bien organisée avance toujours plus sereinement."
       },
       result: {
-        title: "Vous gagnez :",
+        title: "Résultat",
         benefits: [
-          "Une base administrative solide",
-          "Des obligations maîtrisées sans stress",
-          "Une organisation claire et durable"
+          "Moins de stress administratif",
+          "Une situation claire et sécurisée",
+          "Un administratif maîtrisable et à jour",
+          "Plus de temps pour vous concentrer sur votre activité"
         ],
         summary: "Clarté. Fiabilité. Sérénité."
       },
       cta: {
-        title: "Besoin de remettre de l’ordre dans vos démarches ?",
+        title: "Besoin de remettre de l'ordre dans vos démarches ?",
         description: "Un diagnostic rapide suffit souvent à retrouver de la visibilité et du calme.",
         buttonText: "Échangeons simplement",
         buttonLink: "/contact"
@@ -71,32 +76,37 @@ export const expertises: Expertise[] = [
     id: "organisation-financiere",
     badge: "Finance",
     title: "Organisation financière & pilotage",
-    subtitle: "Donner du sens et de la visibilité aux chiffres.",
-    description: "Les chiffres ne sont pas une contrainte : ils sont la voix de l’entreprise.",
+    subtitle: "Donnez du sens à vos chiffres pour mieux décider.",
+    description: "Les chiffres ne sont pas une contrainte : ils sont la voix de l'entreprise.",
     image: "/images/Expertises/Organisation_financiere.jpg",
     content: {
-      presentation: "Les chiffres ne sont pas des obstacles, mais des alliés. Ils racontent la vérité de l’entreprise : ses forces, ses fragilités, ses opportunités. Chez Advalis, nous aidons les dirigeants à les comprendre et à en faire un véritable outil de décision. Nous transformons les données brutes en indicateurs clairs et parlants, pour piloter avec lucidité et confiance.",
+      presentation: "Donnez du sens à vos chiffres pour mieux décider.",
       interventions: [
-        { title: "Analyse des flux", description: "Lecture des marges, coûts et trésorerie." },
-        { title: "Outils de pilotage", description: "Création de tableaux de bord simples et adaptés." },
-        { title: "Suivi régulier", description: "Actualisation mensuelle des indicateurs clés." },
-        { title: "Dialogue comptable", description: "Interface fluide avec l’expert-comptable." }
+        { title: "Quand faire appel à nous ?", description: "Vous manquez de visibilité sur la situation financière de votre activité." },
+        { title: "Quand faire appel à nous ?", description: "Vous avancez sans indicateurs clairs." },
+        { title: "Quand faire appel à nous ?", description: "Les chiffres existent, mais vous ne savez pas les exploiter." },
+        { title: "Quand faire appel à nous ?", description: "Vous avez besoin de repères pour décider plus sereinement." },
+        { title: "Ce que nous faisons", description: "Mise en place d'indicateurs simples et lisibles." },
+        { title: "Ce que nous faisons", description: "Construction d'un suivi financier adapté à votre activité." },
+        { title: "Ce que nous faisons", description: "Aide à la lecture et à l'analyse de vos résultats." },
+        { title: "Ce que nous faisons", description: "Clarification des priorités et des points de vigilance." }
       ],
       approach: {
-        quote: "Un chiffre n’a de valeur que s’il éclaire une décision.",
+        quote: "Un chiffre n'a de valeur que s'il éclaire une décision.",
         description: "Nous concevons des outils lisibles et pragmatiques, centrés sur la compréhension. La donnée devient un repère clair au service du dirigeant, pour piloter avec discernement et anticipation."
       },
       result: {
-        title: "Vous obtenez :",
+        title: "Résultat",
         benefits: [
-          "Une vision claire et fiable de votre activité",
-          "Des décisions alignées sur la réalité",
-          "Un sentiment de maîtrise financière retrouvé"
+          "Une vision claire de votre activité",
+          "Des décisions plus rapides et plus justes",
+          "Une meilleure anticipation",
+          "Plus de confiance dans votre pilotage"
         ],
         summary: "Lucidité. Anticipation. Sérénité."
       },
       cta: {
-        title: "Besoin d’y voir clair dans vos chiffres ?",
+        title: "Besoin d'y voir clair dans vos chiffres ?",
         description: "Un regard extérieur peut suffire à rétablir la cohérence.",
         buttonText: "Échangeons simplement",
         buttonLink: "/contact"
@@ -106,28 +116,33 @@ export const expertises: Expertise[] = [
   {
     id: "creation-developpement",
     badge: "Structuration",
-    title: "Création & développement d’activité",
-    subtitle: "Structurer pour accompagner la croissance.",
-    description: "Créer une activité, ce n’est pas seulement remplir des formalités : c’est bâtir des fondations solides.",
+    title: "Création & développement d'activité",
+    subtitle: "Créer une activité, ce n'est pas seulement remplir des formalités : c'est poser des bases solides.",
+    description: "Créer une activité, ce n'est pas seulement remplir des formalités : c'est bâtir des fondations solides.",
     image: "/images/Expertises/Accompagnement.jpg",
     content: {
-      presentation: "Créer une activité, ce n’est pas seulement déposer un statut, c’est donner une forme durable à une vision. Derrière chaque projet, il y a une énergie à canaliser et des décisions structurantes à prendre. Chez Advalis, nous accompagnons les créateurs, indépendants et dirigeants d’association dans les étapes clés : choix du cadre, structuration, planification et mise en route.",
+      presentation: "Créer une activité, ce n'est pas seulement remplir des formalités : c'est poser des bases solides.",
       interventions: [
-        { title: "Création", description: "Accompagnement complet des formalités de création." },
-        { title: "Choix du statut", description: "Analyse claire et raisonnée du régime le plus adapté." },
-        { title: "Planification", description: "Définition des étapes fiscales, sociales et administratives." },
-        { title: "Mise en route", description: "Implémentation des outils de gestion et de suivi." }
+        { title: "Quand faire appel à nous ?", description: "Vous lancez une activité ou un nouveau projet." },
+        { title: "Quand faire appel à nous ?", description: "Vous doutez de la structure choisie." },
+        { title: "Quand faire appel à nous ?", description: "Vous souhaitez partir sur des bases claires et saines." },
+        { title: "Quand faire appel à nous ?", description: "Vous voulez éviter les erreurs fréquentes du démarrage." },
+        { title: "Ce que nous faisons", description: "Clarification de votre projet et de votre fonctionnement." },
+        { title: "Ce que nous faisons", description: "Aide aux choix structurants (organisation, cadre, priorités)." },
+        { title: "Ce que nous faisons", description: "Mise en place d'une structure adaptée à votre réalité." },
+        { title: "Ce que nous faisons", description: "Accompagnement dans les premières étapes clés." }
       ],
       approach: {
-        quote: "Créer, c’est bâtir avant de grandir.",
-        description: "Nous aidons à transformer une idée en projet structuré. L’objectif : poser des bases solides sans freiner l’élan. Chez Advalis, chaque création mérite une architecture cohérente, gage de stabilité et de confiance."
+        quote: "Créer, c'est bâtir avant de grandir.",
+        description: "Nous aidons à transformer une idée en projet structuré. L'objectif : poser des bases solides sans freiner l'élan. Chez Advalis, chaque création mérite une architecture cohérente, gage de stabilité et de confiance."
       },
       result: {
-        title: "Vous obtenez :",
+        title: "Résultat",
         benefits: [
-          "Des fondations claires et conformes",
-          "Des choix de statut cohérents",
-          "Un lancement fluide et maîtrisé"
+          "Un démarrage plus serein",
+          "Une activité mieux structurée dès le départ",
+          "Moins d'erreurs coûteuses",
+          "Une trajectoire plus lisible"
         ],
         summary: "Vision. Structure. Confiance."
       },
@@ -143,33 +158,38 @@ export const expertises: Expertise[] = [
     id: "structuration-relance",
     badge: "Direction",
     title: "Structuration & relance",
-    subtitle: "Retrouver du sens, du cadre et de l’élan.",
+    subtitle: "Redonner de la cohérence à une activité qui s'est complexifiée ou essoufflée.",
     description: "Même les structures les plus solides peuvent perdre en cohérence.",
     image: "/images/Expertises/Structuration.jpg",
     content: {
-      presentation: "Aucune entreprise n’est à l’abri d’un essoufflement. Ce n’est pas une faiblesse, mais un signal : celui qu’il est temps de redonner du sens et de la direction. Chez Advalis, nous aidons les dirigeants à remettre de la clarté dans leur organisation, à rétablir les priorités et à relancer la dynamique collective.",
+      presentation: "Redonner de la cohérence à une activité qui s'est complexifiée ou essoufflée.",
       interventions: [
-        { title: "Diagnostic", description: "Analyse complète de la situation et des points de blocage." },
-        { title: "Réorganisation", description: "Repriorisation des chantiers, clarification des rôles." },
-        { title: "Pilotage", description: "Mise en place d’outils de suivi simples et efficaces." },
-        { title: "Accompagnement", description: "Soutien humain et stratégique du dirigeant." }
+        { title: "Quand faire appel à nous ?", description: "Votre activité stagne ou devient difficile à piloter." },
+        { title: "Quand faire appel à nous ?", description: "Vous vous sentez dispersé ou débordé." },
+        { title: "Quand faire appel à nous ?", description: "L'organisation actuelle ne suit plus votre réalité." },
+        { title: "Quand faire appel à nous ?", description: "Vous avez besoin de remettre de l'ordre et du sens." },
+        { title: "Ce que nous faisons", description: "Analyse globale de votre fonctionnement." },
+        { title: "Ce que nous faisons", description: "Identification des points de blocage." },
+        { title: "Ce que nous faisons", description: "Re-structuration des priorités et de l'organisation." },
+        { title: "Ce que nous faisons", description: "Mise en place d'un cadre plus clair et plus cohérent." }
       ],
       approach: {
-        quote: "Relancer, ce n’est pas recommencer. C’est réapprendre à avancer.",
-        description: "Notre approche repose sur la méthode, l’écoute et la clarté. Pas de solutions toutes faites, mais une reconstruction lucide et durable. Chez Advalis, nous restaurons la cohérence avant de relancer la performance."
+        quote: "Relancer, ce n'est pas recommencer. C'est réapprendre à avancer.",
+        description: "Notre approche repose sur la méthode, l'écoute et la clarté. Pas de solutions toutes faites, mais une reconstruction lucide et durable. Chez Advalis, nous restaurons la cohérence avant de relancer la performance."
       },
       result: {
-        title: "Vous retrouvez :",
+        title: "Résultat",
         benefits: [
-          "Une direction claire et partagée",
-          "Une équipe recentrée sur l’essentiel",
-          "Un rythme soutenable et porteur"
+          "Une activité plus lisible",
+          "Moins de dispersion",
+          "Une meilleure stabilité",
+          "Un nouveau souffle opérationnel"
         ],
         summary: "Clarté. Recentrage. Élan."
       },
       cta: {
-        title: "Votre activité tourne, mais n’avance plus ?",
-        description: "Un regard extérieur peut suffire à redonner de l’élan.",
+        title: "Votre activité tourne, mais n'avance plus ?",
+        description: "Un regard extérieur peut suffire à redonner de l'élan.",
         buttonText: "Échangeons simplement",
         buttonLink: "/contact"
       }
@@ -179,27 +199,31 @@ export const expertises: Expertise[] = [
     id: "conseil-digital",
     badge: "Digital",
     title: "Conseil digital & outils de gestion",
-    subtitle: "Digitaliser avec justesse et efficacité.",
-    description: "La digitalisation n’est pas un luxe : c’est un levier de clarté et d’efficacité.",
+    subtitle: "Des outils simples, utiles et adaptés — sans complexité inutile.",
+    description: "La digitalisation n'est pas un luxe : c'est un levier de clarté et d'efficacité.",
     image: "/images/Expertises/Conseil_digital.jpg",
     content: {
-      presentation: "La digitalisation ne se résume pas à empiler des outils : elle consiste à choisir ceux qui simplifient et clarifient. Chez Advalis, nous accompagnons les dirigeants dans la sélection, l’organisation et la maîtrise de leurs solutions numériques. Notre approche repose sur la pédagogie, la mesure et la sobriété technologique.",
+      presentation: "Des outils simples, utiles et adaptés — sans complexité inutile.",
       interventions: [
-        { title: "Analyse des besoins", description: "Étude approfondie des processus et objectifs." },
-        { title: "Choix des outils", description: "Sélection raisonnée d’outils adaptés (CRM, facturation, pilotage)." },
-        { title: "Automatisation", description: "Centralisation et automatisation des tâches répétitives." },
-        { title: "Formation & suivi", description: "Accompagnement à la prise en main et à l’autonomie digitale." }
+        { title: "Quand faire appel à nous ?", description: "Vos outils actuels vous compliquent la vie." },
+        { title: "Quand faire appel à nous ?", description: "Vous utilisez trop d'outils… ou pas les bons." },
+        { title: "Quand faire appel à nous ?", description: "Vous perdez du temps dans des systèmes mal adaptés." },
+        { title: "Ce que nous faisons", description: "Sélection et mise en place d'outils adaptés (Notion, Excel, Drive…)." },
+        { title: "Ce que nous faisons", description: "Simplification de vos outils existants." },
+        { title: "Ce que nous faisons", description: "Organisation de votre environnement digital." },
+        { title: "Ce que nous faisons", description: "Automatisations légères quand cela apporte un réel gain." }
       ],
       approach: {
-        quote: "La technologie n’a de valeur que si elle simplifie.",
+        quote: "La technologie n'a de valeur que si elle simplifie.",
         description: "Nous digitalisons avec méthode et discernement. Chaque outil mis en place doit libérer du temps et renforcer la cohérence interne. Chez Advalis, la technologie est un levier de simplicité au service de la performance."
       },
       result: {
-        title: "Vous gagnez :",
+        title: "Résultat",
         benefits: [
-          "Du temps et une vision centralisée",
-          "Une organisation plus fluide et connectée",
-          "Une autonomie numérique durable"
+          "Des outils réellement utiles",
+          "Moins de perte de temps",
+          "Une organisation digitale claire et fluide",
+          "Un quotidien plus simple"
         ],
         summary: "Simplicité. Structure. Performance."
       },
