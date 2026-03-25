@@ -4,6 +4,15 @@ const nextConfig = {
   images: {
     unoptimized: process.env.NODE_ENV === 'development',
   },
+  async redirects() {
+    return [
+      {
+        source: '/activation-projet',
+        destination: '/activation',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig
