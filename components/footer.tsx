@@ -29,26 +29,36 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
-              <li>
+                <li>
                 <Link href="/nos-expertises" className="text-muted-foreground hover:text-foreground transition-colors">
                   Savoir-faire
                 </Link>
-              </li>
-              <li>
+                </li>
+                <li>
                 <Link href="/nos-secteurs" className="text-muted-foreground hover:text-foreground transition-colors">
                   Secteurs d&apos;intervention
                 </Link>
-              </li>
-              <li>
+                </li>
+                <li>
                 <Link href="/articles" className="text-muted-foreground hover:text-foreground transition-colors">
                   Inspirations
                 </Link>
-              </li>
-              <li>
+                </li>
+                <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
                   Contact
                 </Link>
-              </li>
+                </li>
+                <li> 
+                <Link href="/mentions-legales" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Mentions légales
+                </Link>
+                </li>
+                <li>  
+                <Link href="/politique-confidentialite" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Politique de confidentialité
+                </Link>
+                </li>
             </ul>
           </div>
 
@@ -56,13 +66,13 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-3">
-              <li className="flex items-center space-x-2 text-muted-foreground">
+              <li className="flex items-center space-x-2 text-muted-foreground transition-colors hover:text-foreground">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm"> <Link href="mailto:contact@advalis.fr">contact@advalis.fr</Link></span>
+                <span className="text-sm transition-colors hover:text-foreground"> <Link href="mailto:contact@advalis.fr">contact@advalis.fr</Link></span>
               </li>
-              <li className="flex items-center space-x-2 text-muted-foreground">
+              <li className="flex items-center space-x-2 text-muted-foreground transition-colors hover:text-foreground">
                 <Phone className="h-4 w-4" />
-                <span className="text-sm"> <Link href="tel:0185097243">01 85 09 72 43</Link></span>
+                <span className="text-sm transition-colors hover:text-foreground"> <Link href="tel:0185097243">01 85 09 72 43</Link></span>
               </li>
               <li className="flex items-center space-x-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
@@ -72,18 +82,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t mt-8 pt-8 flex flex-col justify-center text-center items-center ">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Advalis. Tous droits réservés.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/mentions-legales" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Mentions légales
-            </Link>
-            <Link href="/politique-confidentialite" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Politique de confidentialité
-            </Link>
-          </div>
+          <p className="text-sm text-muted-foreground">Développé par <Link href="https://joe-labs.vercel.app/" className="text-muted-foreground hover:text-foreground transition-colors">JoeLabs</Link>
+          </p>
         </div>
       </div>
     </footer>
