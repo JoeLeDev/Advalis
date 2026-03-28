@@ -32,15 +32,6 @@ export function KairosCheckoutButton({
 
   async function handleClick() {
     setLoading(true)
-    const tab = window.open('about:blank', '_blank', 'noopener,noreferrer')
-    if (!tab) {
-      setLoading(false)
-      window.alert(
-        'Autorisez les pop-ups pour ce site afin d’ouvrir le paiement dans un nouvel onglet, ou réessayez.'
-      )
-      return
-    }
-    tab.opener = null
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
@@ -52,12 +43,11 @@ export function KairosCheckoutButton({
         throw new Error(data.error || 'Erreur')
       }
       if (data.url) {
-        tab.location.href = data.url
+        window.location.href = data.url
         return
       }
       throw new Error('Pas d’URL')
     } catch {
-      tab.close()
       window.alert(
         'Impossible d’ouvrir le paiement pour le moment. Écrivez-nous via la page Contact ou réessayez plus tard.'
       )
