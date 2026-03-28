@@ -68,15 +68,15 @@ export default function ActivationKairosPage() {
 
       {/* Reconnaissance */}
       <section className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-12">
-        <h2 className="font-kairos text-2xl font-semibold text-[#0a1628] md:text-3xl">
-          Si vous vous reconnaissez là-dedans
+        <h2 className="font-kairos text-2xl font-semibold leading-snug text-[#0a1628] md:text-3xl">
+          Si votre projet n’avance pas, ce n’est généralement pas un problème d’idée
         </h2>
-        <ul className="mt-8 space-y-4 text-base leading-relaxed text-slate-700 md:text-lg">
+        <p className="mt-6 text-lg font-medium text-slate-800 md:text-xl">Vous avez déjà quelque chose en tête.</p>
+        <ul className="mt-6 space-y-4 text-base leading-relaxed text-slate-700 md:text-lg">
           {[
-            'Vous avez une idée en tête, mais vous n’arrivez pas à la structurer concrètement',
-            'Vous avancez, mais sans réelle direction',
-            'Vous commencez plusieurs choses sans aller au bout',
-            'Vous sentez que votre projet pourrait être plus clair, plus solide',
+            'Mais vous n’arrivez pas à le structurer concrètement',
+            'Vous avancez sans réelle direction',
+            'Vous tournez autour sans passer un cap',
           ].map((item) => (
             <li key={item} className="flex gap-4">
               <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-700">
@@ -86,12 +86,18 @@ export default function ActivationKairosPage() {
             </li>
           ))}
         </ul>
-        <div className="mt-10 rounded-2xl border border-sky-200/80 bg-sky-50/90 px-6 py-5 text-slate-800 md:flex md:items-center md:justify-between md:gap-8 md:px-8">
-          <p className="text-sm font-medium md:text-base">
-            <span className="mr-2" aria-hidden>
-              👍
+        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          <p className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 text-base font-medium text-slate-800 shadow-sm md:px-6">
+            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+              <Check className="h-4 w-4 stroke-[3]" aria-hidden />
             </span>
-            Vous n’êtes pas bloqué par manque d’envie — vous êtes bloqué par manque de structure.
+            <span>Le sujet n’est pas d’en faire plus.</span>
+          </p>
+          <p className="flex items-start gap-3 rounded-2xl border border-[#d4af37]/30 bg-[#fefce8]/80 px-5 py-4 text-base font-medium text-[#0a1628] shadow-sm md:px-6">
+            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+              <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+            </span>
+            <span>C’est de structurer correctement ce que vous avez déjà.</span>
           </p>
         </div>
       </section>
@@ -201,7 +207,7 @@ export default function ActivationKairosPage() {
             </div>
             <Link
               href="/contact"
-              className="mt-8 flex w-full shrink-0 items-center justify-center rounded-xl bg-[#0a1628] px-6 py-4 text-base font-semibold text-white transition hover:bg-[#152238] hover:shadow-lg lg:mt-auto hover:-translate-y-1 hover:shadow-lg"
+              className="mt-8 flex w-full shrink-0 items-center justify-center rounded-xl bg-[#0a1628] px-6 py-4 text-base font-semibold text-white transition hover:-translate-y-1 hover:bg-[#152238] hover:shadow-lg lg:mt-auto"
             >
               Réserver ma place
             </Link>
@@ -267,12 +273,77 @@ export default function ActivationKairosPage() {
               </div>
               <Link
                 href="/contact"
-                className="mt-8 flex w-full shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-[#e8c468] to-[#c9a227] px-6 py-4 text-base font-semibold text-[#0a1628] shadow-lg transition hover:brightness-105 lg:mt-auto hover:-translate-y-1 hover:shadow-lg lg:mt-6"
+                className="mt-8 flex w-full shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-[#e8c468] to-[#c9a227] px-6 py-4 text-base font-semibold text-[#0a1628] shadow-lg transition hover:-translate-y-1 hover:brightness-105 lg:mt-auto"
               >
                 Réserver ma session
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Ce moment peut tout changer */}
+      <section className="border-y border-slate-200 bg-white">
+        <div className="mx-auto max-w-3xl px-6 py-16 md:px-10 lg:py-20">
+          <h2 className="font-kairos text-center text-2xl font-semibold text-[#0a1628] md:text-3xl">
+            Ce moment peut tout changer
+          </h2>
+          <div className="mt-8 space-y-6 text-base leading-relaxed text-slate-700 md:text-lg">
+            <p>
+              Vous pouvez continuer à avancer seul, tester, ajuster, recommencer. Ou vous pouvez structurer votre
+              projet correctement, <span className="font-semibold text-slate-900">une fois pour toutes</span>.
+            </p>
+            <ul className="space-y-4">
+              <li className="flex gap-3">
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+                  <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+                </span>
+                <span>En quelques heures, vous posez un cadre clair.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+                  <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+                </span>
+                <span>Vous prenez des décisions que vous repoussez depuis des semaines.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+                  <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+                </span>
+                <span>Et vous repartez avec quelque chose de concret, sur lequel avancer.</span>
+              </li>
+            </ul>
+            <p className="text-slate-600">
+              La différence ne se fait pas sur le temps que vous passez. Elle se fait sur la clarté avec laquelle vous
+              avancez.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Aide au choix des formats */}
+      <section className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-12">
+        <div className="mx-auto max-w-2xl rounded-[28px] border border-slate-200 bg-[#fafbfc] p-8 text-center shadow-md md:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#b8962e]">
+            <span className="mr-1.5" aria-hidden>
+              💡
+            </span>
+            Besoin d’aide pour choisir ?
+          </p>
+          <p className="mt-4 text-lg font-medium text-[#0a1628]">Vous hésitez entre les deux formats ?</p>
+          <p className="mt-3 flex items-start justify-center gap-3 text-base text-slate-600">
+            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+              <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+            </span>
+            <span className="max-w-md text-left">Planifions un échange rapide pour clarifier votre situation.</span>
+          </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-[#0a1628] px-8 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#152238] hover:shadow-lg"
+          >
+            <span aria-hidden>🎯</span>
+            Planifier un échange (20 min)
+          </Link>
         </div>
       </section>
 
