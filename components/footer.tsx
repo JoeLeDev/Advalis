@@ -86,7 +86,16 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Advalis. Tous droits réservés.
           </p>
-          <p className="text-sm text-muted-foreground">Développé par <Link href="https://joe-labs.vercel.app/" className="text-muted-foreground hover:text-foreground transition-colors">JoeLabs</Link>
+          <p className="text-sm text-muted-foreground">
+            Développé par{' '}
+            <a
+              href="https://joe-labs.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              JoeLabs
+            </a>
           </p>
         </div>
       </div>

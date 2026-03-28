@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { activationSessions, activationSessionsEmptyMessage } from '@/config/activation-sessions'
+import { KairosCheckoutButton } from '@/components/kairos-checkout-button'
+import { CALENDLY_APPEL_DECOUVERTE } from '@/config/activation-sessions'
 import {
   ArrowRight,
-  Calendar,
   Check,
   CircleDot,
   Compass,
@@ -13,20 +13,23 @@ import {
   Scale,
   Search,
   Sparkles,
-  Target,
   UserCheck,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Kairos — Structuration & direction de projet | Advalis',
   description:
-    'Passez d’une idée floue à un projet structuré. Kairos : un temps de travail pour clarifier, structurer et décider. Formats collectif ou privé.',
+    'Un temps de travail conçu pour clarifier, structurer et faire avancer un projet avec méthode. Kairos : formats collectif et privé.',
   alternates: {
     canonical: '/activation',
   },
 }
 
 export default function ActivationKairosPage() {
+  const stripeReady = Boolean(process.env.STRIPE_SECRET_KEY)
+  const checkoutFondation = stripeReady && Boolean(process.env.STRIPE_PRICE_KAIROS_FONDATION)
+  const checkoutDirection = stripeReady && Boolean(process.env.STRIPE_PRICE_KAIROS_DIRECTION)
+
   return (
     <div className="relative min-h-screen bg-[#f7f8fa] text-slate-900">
       {/* Hero — image + overlay navy */}
@@ -49,10 +52,10 @@ export default function ActivationKairosPage() {
             Kairos — Structuration &amp; direction de projet
           </span>
           <h1 className="mt-8 font-kairos text-3xl font-semibold leading-[1.15] tracking-tight text-white md:text-5xl lg:text-[3.25rem]">
-            Passez d’une idée floue à un projet structuré et concret
+            Passez d’une idée à un projet structuré
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-white md:text-xl">
-            Un temps de travail pour clarifier, structurer et avancer avec une direction claire.
+            Un temps de travail conçu pour clarifier, structurer et faire avancer un projet avec méthode.
           </p>
           <div className="mt-10">
             <a
@@ -60,46 +63,34 @@ export default function ActivationKairosPage() {
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#0a1628] px-8 py-4 text-base font-semibold text-white shadow-lg ring-1 ring-white/15 transition hover:bg-[#152238] hover:ring-white/25"
             >
               Choisir mon format
-              <ArrowRight className="h-5 w-5" />
+              <ArrowRight className="h-5 w-5" aria-hidden />
             </a>
           </div>
         </div>
       </section>
 
-      {/* Reconnaissance */}
+      {/* Vision */}
       <section className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-12">
         <h2 className="font-kairos text-2xl font-semibold leading-snug text-[#0a1628] md:text-3xl">
-          Si votre projet n’avance pas, ce n’est généralement pas un problème d’idée
+          Une vision ne suffit pas
         </h2>
-        <p className="mt-6 text-lg font-medium text-slate-800 md:text-xl">Vous avez déjà quelque chose en tête.</p>
-        <ul className="mt-6 space-y-4 text-base leading-relaxed text-slate-700 md:text-lg">
-          {[
-            'Mais vous n’arrivez pas à le structurer concrètement',
-            'Vous avancez sans réelle direction',
-            'Vous tournez autour sans passer un cap',
-          ].map((item) => (
-            <li key={item} className="flex gap-4">
-              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-700">
-                <Check className="h-4 w-4 stroke-[3]" aria-hidden />
-              </span>
-              <span>{item}</span>
-            </li>
-          ))}
+        <ul className="mt-8 space-y-4 text-lg leading-relaxed text-slate-800 md:text-xl">
+          <li className="flex gap-3">
+            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+              <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+            </span>
+            <span>Les projets qui avancent ne sont pas forcément les meilleurs.</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+              <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+            </span>
+            <span>Ce sont ceux qui sont structurés.</span>
+          </li>
         </ul>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
-          <p className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 text-base font-medium text-slate-800 shadow-sm md:px-6">
-            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
-              <Check className="h-4 w-4 stroke-[3]" aria-hidden />
-            </span>
-            <span>Le sujet n’est pas d’en faire plus.</span>
-          </p>
-          <p className="flex items-start gap-3 rounded-2xl border border-[#d4af37]/30 bg-[#fefce8]/80 px-5 py-4 text-base font-medium text-[#0a1628] shadow-sm md:px-6">
-            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
-              <Check className="h-4 w-4 stroke-[3]" aria-hidden />
-            </span>
-            <span>C’est de structurer correctement ce que vous avez déjà.</span>
-          </p>
-        </div>
+        <p className="mt-8 text-lg leading-relaxed text-slate-700 md:text-xl">
+          Kairos est conçu pour transformer une vision en projet structuré et exploitable.
+        </p>
       </section>
 
       {/* Ce que Kairos apporte */}
@@ -138,16 +129,29 @@ export default function ActivationKairosPage() {
         </div>
       </section>
 
-      {/* Intro 2 niveaux */}
+      {/* Deux formats */}
       <section className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-kairos text-2xl font-semibold text-[#0a1628] md:text-3xl">
-            Deux niveaux, selon votre avancement
+            <span className="mr-2 inline-block" aria-hidden>
+              ⚖️
+            </span>
+            Deux formats, selon votre besoin
           </h2>
-          <p className="mt-4 text-slate-600 md:text-lg">
-            Tous les projets ne nécessitent pas la même approche. Certains ont besoin de poser des bases. D’autres ont
-            besoin d’aller plus vite et de trancher.
-          </p>
+          <ul className="mt-6 space-y-3 text-slate-600 md:text-lg">
+            <li className="flex items-start justify-center gap-3">
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+                <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+              </span>
+              <span className="text-left">Structurer une base solide</span>
+            </li>
+            <li className="flex items-start justify-center gap-3">
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+                <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+              </span>
+              <span className="text-left">Ou avancer avec des décisions claires</span>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -162,11 +166,20 @@ export default function ActivationKairosPage() {
                 Max 8 personnes
               </span>
             </div>
-            <h3 className="mt-5 font-kairos text-2xl font-semibold text-[#0a1628] md:text-3xl">Kairos — Fondation</h3>
+            <h3 className="mt-5 font-kairos text-2xl font-semibold text-[#0a1628] md:text-3xl">
+              <span className="mr-2 text-slate-400" aria-hidden>
+                🔹
+              </span>
+              KAIROS — Fondation (Collectif)
+            </h3>
             <p className="mt-1 text-sm font-medium text-slate-500">Format collectif</p>
-            <div className="mt-6 flex flex-wrap items-baseline gap-2">
-              <span className="text-5xl font-bold tracking-tight text-[#0a1628]">149€</span>
-              <span className="text-lg text-slate-500">— 4h30 (groupe)</span>
+            <div className="mt-6">
+              <p className="text-xs font-bold uppercase tracking-wide text-emerald-700">Offre de lancement</p>
+              <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <span className="text-xl font-semibold text-slate-400 line-through md:text-2xl">249€</span>
+                <span className="text-5xl font-bold tracking-tight text-[#0a1628]">149€</span>
+                <span className="w-full text-lg text-slate-500 sm:w-auto sm:pl-1">— 4h30 (groupe)</span>
+              </div>
             </div>
             <p className="mt-4 text-base font-medium text-slate-800">
               Pour structurer une base claire et avancer avec méthode
@@ -205,12 +218,14 @@ export default function ActivationKairosPage() {
                 ))}
               </ul>
             </div>
-            <Link
-              href="/contact"
-              className="mt-8 flex w-full shrink-0 items-center justify-center rounded-xl bg-[#0a1628] px-6 py-4 text-base font-semibold text-white transition hover:-translate-y-1 hover:bg-[#152238] hover:shadow-lg lg:mt-auto"
+            <KairosCheckoutButton
+              offer="fondation"
+              checkoutEnabled={checkoutFondation}
+              className="mt-8 flex w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-[#0a1628] px-6 py-4 text-base font-semibold text-white transition hover:-translate-y-1 hover:bg-[#152238] hover:shadow-lg lg:mt-auto"
             >
-              Réserver ma place
-            </Link>
+              <span aria-hidden>🎯</span>
+              Réserver ma place MAINTENANT
+            </KairosCheckoutButton>
           </div>
 
           {/* Direction — carte sombre + or */}
@@ -225,11 +240,20 @@ export default function ActivationKairosPage() {
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-[#e8c468]">
                 <Compass className="h-8 w-8" />
               </div>
-              <h3 className="mt-5 font-kairos text-2xl font-semibold text-white md:text-3xl">Kairos — Direction</h3>
+              <h3 className="mt-5 font-kairos text-2xl font-semibold text-white md:text-3xl">
+                <span className="mr-2 text-slate-500" aria-hidden>
+                  🔹
+                </span>
+                KAIROS — Direction (Privé)
+              </h3>
               <p className="mt-1 text-sm font-medium text-slate-400">Format privé</p>
-              <div className="mt-6 flex flex-wrap items-baseline gap-2">
-                <span className="text-5xl font-bold tracking-tight text-[#e8c468]">299€</span>
-                <span className="text-lg text-slate-400">— 4h30 (individuel)</span>
+              <div className="mt-6">
+                <p className="text-xs font-bold uppercase tracking-wide text-[#e8c468]/90">Offre de lancement</p>
+                <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <span className="text-xl font-semibold text-slate-500 line-through md:text-2xl">399€</span>
+                  <span className="text-5xl font-bold tracking-tight text-[#e8c468]">299€</span>
+                  <span className="w-full text-lg text-slate-400 sm:w-auto sm:pl-1">— 4h30 (individuel)</span>
+                </div>
               </div>
               <p className="mt-4 text-base font-medium text-slate-100">
                 Pour structurer sérieusement et prendre des décisions concrètes
@@ -271,14 +295,44 @@ export default function ActivationKairosPage() {
                   ))}
                 </ul>
               </div>
-              <Link
-                href="/contact"
-                className="mt-8 flex w-full shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-[#e8c468] to-[#c9a227] px-6 py-4 text-base font-semibold text-[#0a1628] shadow-lg transition hover:-translate-y-1 hover:brightness-105 lg:mt-auto"
+              <KairosCheckoutButton
+                offer="direction"
+                checkoutEnabled={checkoutDirection}
+                className="mt-8 flex w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#e8c468] to-[#c9a227] px-6 py-4 text-base font-semibold text-[#0a1628] shadow-lg transition hover:-translate-y-1 hover:brightness-105 lg:mt-auto"
               >
-                Réserver ma session
-              </Link>
+                <span aria-hidden>🎯</span>
+                Réserver ma session MAINTENANT
+              </KairosCheckoutButton>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Aide au choix des formats */}
+      <section className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-12">
+        <div className="mx-auto max-w-2xl rounded-[28px] border border-slate-200 bg-[#fafbfc] p-8 text-center shadow-md md:p-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#b8962e]">
+            <span className="mr-1.5" aria-hidden>
+              💡
+            </span>
+            Besoin d’aide pour choisir ?
+          </p>
+          <p className="mt-4 text-lg font-medium text-[#0a1628]">Vous hésitez entre les deux formats ?</p>
+          <p className="mt-3 flex items-start justify-center gap-3 text-base text-slate-600">
+            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+              <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+            </span>
+            <span className="max-w-md text-left">Planifions un échange rapide pour clarifier votre situation.</span>
+          </p>
+          <Link
+            href={CALENDLY_APPEL_DECOUVERTE}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-[#0a1628] px-8 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#152238] hover:shadow-lg"
+          >
+            <span aria-hidden>🎯</span>
+            Planifier un échange (20 min)
+          </Link>
         </div>
       </section>
 
@@ -310,74 +364,22 @@ export default function ActivationKairosPage() {
                 <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
                   <Check className="h-4 w-4 stroke-[3]" aria-hidden />
                 </span>
-                <span>Et vous repartez avec quelque chose de concret, sur lequel avancer.</span>
+                <span>Vous repartez avec quelque chose de concret.</span>
               </li>
             </ul>
-            <p className="text-slate-600">
-              La différence ne se fait pas sur le temps que vous passez. Elle se fait sur la clarté avec laquelle vous
-              avancez.
+            <p className="flex gap-3 text-slate-600">
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+                <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+              </span>
+              <span>La différence ne se fait pas sur le temps que vous passez.</span>
+            </p>
+            <p className="flex gap-3 text-slate-600">
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
+                <Check className="h-4 w-4 stroke-[3]" aria-hidden />
+              </span>
+              <span>Elle se fait sur la clarté avec laquelle vous avancez.</span>
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Aide au choix des formats */}
-      <section className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-12">
-        <div className="mx-auto max-w-2xl rounded-[28px] border border-slate-200 bg-[#fafbfc] p-8 text-center shadow-md md:p-10">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[#b8962e]">
-            <span className="mr-1.5" aria-hidden>
-              💡
-            </span>
-            Besoin d’aide pour choisir ?
-          </p>
-          <p className="mt-4 text-lg font-medium text-[#0a1628]">Vous hésitez entre les deux formats ?</p>
-          <p className="mt-3 flex items-start justify-center gap-3 text-base text-slate-600">
-            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
-              <Check className="h-4 w-4 stroke-[3]" aria-hidden />
-            </span>
-            <span className="max-w-md text-left">Planifions un échange rapide pour clarifier votre situation.</span>
-          </p>
-          <Link
-            href="/contact"
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-[#0a1628] px-8 py-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#152238] hover:shadow-lg"
-          >
-            <span aria-hidden>🎯</span>
-            Planifier un échange (20 min)
-          </Link>
-        </div>
-      </section>
-
-      {/* Prochaines sessions */}
-      <section id="sessions" className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-12">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0a1628] text-[#d4af37]">
-            <Calendar className="h-7 w-7" />
-          </div>
-          <h2 className="mt-6 font-kairos text-2xl font-semibold text-[#0a1628] md:text-3xl">Prochaines sessions</h2>
-          <p className="mt-3 text-lg font-medium text-slate-700">Sélectionnez votre date :</p>
-        </div>
-        <div className="mx-auto mt-10 grid max-w-2xl gap-4">
-          {activationSessions.length === 0 ? (
-            <p className="rounded-2xl border border-dashed border-slate-300 bg-white px-6 py-8 text-center text-slate-600">
-              {activationSessionsEmptyMessage}
-            </p>
-          ) : (
-            activationSessions.map((session) => (
-              <Link
-                key={session.id}
-                href={session.bookingHref ?? '/contact'}
-                className="group flex items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-white px-6 py-5 shadow-md transition hover:border-[#0a1628]/20 hover:shadow-lg"
-              >
-                <span className="text-left font-medium text-slate-900 md:text-lg">
-                  <span className="text-slate-500">{session.label} —</span> le {session.dateLabel}
-                </span>
-                <span className="flex items-center gap-2 text-sm font-semibold text-[#0a1628] md:text-base">
-                  Cliquez pour réserver
-                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-                </span>
-              </Link>
-            ))
-          )}
         </div>
       </section>
 
@@ -418,18 +420,20 @@ export default function ActivationKairosPage() {
             Il a besoin de clarté, de structure et de décisions.
           </p>
           <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="/contact"
+            <KairosCheckoutButton
+              offer="fondation"
+              checkoutEnabled={checkoutFondation}
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-[#0a1628] transition hover:bg-slate-100 hover:-translate-y-1 hover:shadow-lg"
             >
               Réserver ma place (collectif)
-            </Link>
-            <Link
-              href="/contact"
+            </KairosCheckoutButton>
+            <KairosCheckoutButton
+              offer="direction"
+              checkoutEnabled={checkoutDirection}
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#d4af37]/50 bg-transparent px-8 py-4 text-base font-semibold text-[#e8c468] transition hover:bg-white/5 hover:-translate-y-1 hover:shadow-lg"
             >
               Réserver ma session (privé)
-            </Link>
+            </KairosCheckoutButton>
           </div>
         </div>
       </section>

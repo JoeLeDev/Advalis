@@ -63,7 +63,7 @@ styles/              # CSS global (ex. variables de thème)
 
 Le contenu éditorial principal est dans `app/activation/page.tsx`.
 
-Les **dates des prochaines sessions** sont centralisées dans **`config/activation-sessions.ts`** : modifier le tableau `activationSessions` (labels, dates affichées, lien optionnel `bookingHref` vers Calendly, formulaire externe, etc.), puis **redéployer**. Aucune authentification n’est requise. Si le tableau est vide, le message défini par `activationSessionsEmptyMessage` s’affiche.
+Les **liens Calendly** (appel découverte, etc.) sont dans **`config/activation-sessions.ts`**. La prise de rendez-vous se fait via le bouton **Planifier un échange** sur la page. Une liste « prochaines sessions » pourra être réintroduite plus tard (statique ou API Calendly).
 
 Une redirection **permanente** `/activation-projet` → `/activation` est configurée dans `next.config.mjs`.
 

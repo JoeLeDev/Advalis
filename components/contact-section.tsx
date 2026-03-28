@@ -100,7 +100,14 @@ export function ContactSection() {
             <h4 className="text-lg font-bold text-blue-800 mb-2">Merci pour votre réponse !</h4>
             <p className="text-blue-700 mb-4">
               On revient vers vous dans les 24h. Vous pouvez aussi nous écrire directement sur WhatsApp si besoin : 
-              <a href="https://bit.ly/44ePnAO" className="underline ml-1">https://bit.ly/44ePnAO</a>
+              <a
+                href="https://bit.ly/44ePnAO"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline ml-1"
+              >
+                https://bit.ly/44ePnAO
+              </a>
             </p>
             <p className="text-sm text-blue-600">– L&apos;équipe ADVALIS</p>
           </div>
